@@ -16,4 +16,5 @@ func load_scene(scene_name):
 func change_scene_to(scene_name):
 	if last_scene: remove_child(last_scene)
 	add_child(scenes_loaded[scene_name])
+	if scenes_loaded[scene_name].has_method("on_enter_scene"): scenes_loaded[scene_name].on_enter_scene()
 	last_scene=scenes_loaded[scene_name]
