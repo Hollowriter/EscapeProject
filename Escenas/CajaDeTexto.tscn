@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Fuentes/Fuente1.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Codigo/CajaDeTexto.gd" type="Script" id=2]
+
+[node name="CajaDeTexto" type="Label"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -247.0
+custom_fonts/font = ExtResource( 1 )
+autowrap = true
+clip_text = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fondo" type="ColorRect" parent="."]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.196078, 0.952941, 0.666667, 0.235294 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+[connection signal="timeout" from="Timer" to="." method="TimerTimeout"]
