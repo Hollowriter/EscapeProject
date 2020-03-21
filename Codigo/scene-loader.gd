@@ -5,8 +5,9 @@ var last_scene
 
 func _ready():
 	load_scene("Cocina")
-	#load_scene("Patio")
+	load_scene("Dormitorio")
 	#load_scene("Calle")
+	yield( get_tree().create_timer(0.5), "timeout")
 	change_scene_to("Cocina")
 
 func load_scene(scene_name):

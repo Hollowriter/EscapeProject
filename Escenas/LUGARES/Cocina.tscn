@@ -12,13 +12,16 @@ position = Vector2( 513, 301 )
 scale = Vector2( 1.64856, 1.45564 )
 texture = ExtResource( 2 )
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 893, 259 )
-texture = ExtResource( 3 )
-
 [node name="Button" type="Button" parent="."]
-margin_left = 870.0
-margin_top = 148.0
-margin_right = 946.0
-margin_bottom = 218.0
+margin_left = 803.0
+margin_top = 86.0
+margin_right = 879.0
+margin_bottom = 156.0
+icon = ExtResource( 3 )
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 34.0
+margin_top = 195.0
+margin_right = 110.0
+margin_bottom = 265.0
 icon = ExtResource( 3 )
