@@ -1,0 +1,22 @@
+{
+	"1": {
+		"nombre": "item1",
+		"icon": "",
+		"tipo": "simple",
+		"descripcion": "Este es un item de prueba"
+	},
+
+	"2": {
+		"nombre": "item2",
+		"icon": "",
+		"tipo": "combinable",
+		"descripcion": "Este es un item de prueba combinable"
+	},
+
+	"3": {
+		"nombre": "item3",
+		"icon": "",
+		"tipo": "combinable",
+		"descripcion": "Este es un item de prueba combinable"
+	}
+}
