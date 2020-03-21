@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/UI_dialogos_letra.wav-27292365e88decda36c95d3e562f0f14.sample"
+
+[deps]
+
+source_file="res://Audio/UI/UI_dialogos_letra.wav"
+dest_files=[ "res://.import/UI_dialogos_letra.wav-27292365e88decda36c95d3e562f0f14.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

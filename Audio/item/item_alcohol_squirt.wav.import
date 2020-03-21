@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/item_alcohol_squirt.wav-0a4bd019146b552ce9d37baa354d9d10.sample"
+
+[deps]
+
+source_file="res://Audio/item/item_alcohol_squirt.wav"
+dest_files=[ "res://.import/item_alcohol_squirt.wav-0a4bd019146b552ce9d37baa354d9d10.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

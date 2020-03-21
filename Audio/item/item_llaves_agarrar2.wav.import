@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/item_llaves_agarrar2.wav-f397940a07eccf5ebf9bff76253d7c98.sample"
+
+[deps]
+
+source_file="res://Audio/item/item_llaves_agarrar2.wav"
+dest_files=[ "res://.import/item_llaves_agarrar2.wav-f397940a07eccf5ebf9bff76253d7c98.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/item_cajaremedio_dejar.wav-f06b08f79ee46fbfdc70792de444a4d4.sample"
+
+[deps]
+
+source_file="res://Audio/item/item_cajaremedio_dejar.wav"
+dest_files=[ "res://.import/item_cajaremedio_dejar.wav-f06b08f79ee46fbfdc70792de444a4d4.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sfx_lavarmanos.wav-e164d5e5e11898094ef88a28098d537e.sample"
+
+[deps]
+
+source_file="res://Audio/sfx/sfx_lavarmanos.wav"
+dest_files=[ "res://.import/sfx_lavarmanos.wav-e164d5e5e11898094ef88a28098d537e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

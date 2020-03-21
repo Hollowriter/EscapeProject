@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sfx_transicion_caminarmadera.wav-7915edbd0ebdc36fa6f5a52732effa18.sample"
+
+[deps]
+
+source_file="res://Audio/sfx/sfx_transicion_caminarmadera.wav"
+dest_files=[ "res://.import/sfx_transicion_caminarmadera.wav-7915edbd0ebdc36fa6f5a52732effa18.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
