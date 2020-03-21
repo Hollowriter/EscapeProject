@@ -22,6 +22,7 @@ config/icon="res://icon.png"
 
 DataParser="*res://Codigo/Global/DataParser.gd"
 DataItems="*res://Codigo/Global/DataItems.gd"
+DataJugador="*res://Codigo/Global/DataJugador.gd"
 
 [rendering]
 

@@ -1,0 +1,19 @@
+extends Node
+
+var url_JugadorData = "user://JugadorData.bin"
+var inventario = {}
+var maxSlots = 6
+onready var jugadorData = DataParser.cargar_datos(url_JugadorData)
+
+func _ready():
+	cargar_datos()
+
+func cargar_datos():
+	if jugadorData == {}:
+		var dict = {"inventario":{}}
+		for slot in range (0, maxSlots):
+			dict["inventario"][String(slot)] = {"id": "0", "amount": 0}
+		DataParser.escribir_datos(url_JugadorData, dict)
+		inventario = dict["inventario"]
+	#else:
+		#inventario = jugadorData["inventario"]
