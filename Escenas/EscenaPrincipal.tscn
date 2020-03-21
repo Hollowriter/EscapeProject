@@ -1,3 +1,22 @@
+<<<<<<< HEAD
 [gd_scene format=2]
 
 [node name="Main" type="Node"]
+=======
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Codigo/scene-loader.gd" type="Script" id=1]
+[ext_resource path="res://Escenas/CajaDeTexto.tscn" type="PackedScene" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Lugar" type="Node2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="CajaDeTexto" parent="." instance=ExtResource( 2 )]
+margin_left = 32.0
+margin_top = 334.0
+margin_right = 999.0
+margin_bottom = 563.0
+velocidadDelTexto = 0.02
+>>>>>>> scene-loader
