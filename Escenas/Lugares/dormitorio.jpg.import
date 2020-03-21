@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dormitorio.jpg-b2d97810dc81ac8dd547d1494fb407d2.stex"
+path="res://.import/dormitorio.jpg-1b765b1d40caf68066604dd4e9895839.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Escenas/LUGARES/dormitorio.jpg"
-dest_files=[ "res://.import/dormitorio.jpg-b2d97810dc81ac8dd547d1494fb407d2.stex" ]
+source_file="res://Escenas/Lugares/dormitorio.jpg"
+dest_files=[ "res://.import/dormitorio.jpg-1b765b1d40caf68066604dd4e9895839.stex" ]
 
 [params]
 

@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Escenas/LUGARES/Dormitorio.gd" type="Script" id=1]
-[ext_resource path="res://Escenas/LUGARES/dormitorio.jpg" type="Texture" id=2]
+[ext_resource path="res://Escenas/Lugares/Dormitorio.gd" type="Script" id=1]
+[ext_resource path="res://Escenas/Lugares/dormitorio.jpg" type="Texture" id=2]
+
 
 [node name="Dormitorio" type="Node2D"]
 script = ExtResource( 1 )

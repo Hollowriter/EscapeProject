@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cocina.jpg-8bc7ae3489a75fed105d5915d23b5f49.stex"
+path="res://.import/cocina.jpg-c2f94033225d82d8d2ae6f20e4ed6d1c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Escenas/LUGARES/cocina.jpg"
-dest_files=[ "res://.import/cocina.jpg-8bc7ae3489a75fed105d5915d23b5f49.stex" ]
+source_file="res://Escenas/Lugares/cocina.jpg"
+dest_files=[ "res://.import/cocina.jpg-c2f94033225d82d8d2ae6f20e4ed6d1c.stex" ]
 
 [params]
 
