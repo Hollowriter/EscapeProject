@@ -9,11 +9,12 @@ func _ready():
 	cargar_datos()
 
 func cargar_datos():
-	if jugadorData == {}:
+	if jugadorData == null:
 		var dict = {"inventario":{}}
 		for slot in range (0, maxSlots):
 			dict["inventario"][String(slot)] = {"id": "0", "amount": 0}
 		DataParser.escribir_datos(url_JugadorData, dict)
 		inventario = dict["inventario"]
-	#else:
-		#inventario = jugadorData["inventario"]
+		print("Llegue a parsear")
+	else:
+		inventario = jugadorData["inventario"]
