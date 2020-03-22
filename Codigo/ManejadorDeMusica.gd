@@ -1,6 +1,6 @@
 extends Node
 
-onready var nivel:int = 0
+onready var nivel:int = 1 # para testear, en el juego final se inicializa en 0
 onready var musica = $MusicaMenu
 
 func _ready():
