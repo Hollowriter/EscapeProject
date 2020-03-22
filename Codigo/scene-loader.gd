@@ -1,15 +1,7 @@
 extends Node
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
 var espacios = ["","","","","",""]
 var contenido = [[],[],[],[],[],[]]
->>>>>>> Stashed changes
-=======
-var espacios = ["","","","","",""]
-var contenido = ["","","","","",""]
->>>>>>> ea52534d3403182179a2b044467c3c65165080fb
 var scenes_loaded={}
 var last_scene
 
@@ -31,12 +23,6 @@ func change_scene_to(scene_name):
 	add_child(scenes_loaded[scene_name])
 	if scenes_loaded[scene_name].has_method("on_enter_scene"): scenes_loaded[scene_name].on_enter_scene()
 	last_scene=scenes_loaded[scene_name]
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-	
-=======
->>>>>>> ea52534d3403182179a2b044467c3c65165080fb
 	inventario = last_scene.get_node("Inventario")
 	for i in range(espacios.size()):
 		if espacios[i] != "":
@@ -47,13 +33,6 @@ func AgarrarItemClickeado(item):
 		if espacios[i] == "":
 			espacios[i] = item.name
 			item.queue_free()
-<<<<<<< HEAD
 			contenido[i] = [item.texture_normal, item.texto]
 			inventario.AgregarItem(i, item.texture_normal)
 			return
->>>>>>> Stashed changes
-=======
-			contenido[i] = [item.texture_normal]
-			inventario.AgregarItem(i, item.texture_normal)
-			return
->>>>>>> ea52534d3403182179a2b044467c3c65165080fb

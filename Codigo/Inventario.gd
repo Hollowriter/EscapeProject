@@ -54,5 +54,3 @@ func MousePasoPorArriba4():
 
 func MousePasoPorArriba5():
 	MostrarDescripcion(5)
-=======
->>>>>>> ea52534d3403182179a2b044467c3c65165080fb

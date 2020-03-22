@@ -1,4 +1,3 @@
-extends Label
 extends MarginContainer
 
 signal terminoDeEscribir
