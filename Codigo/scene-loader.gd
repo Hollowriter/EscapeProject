@@ -15,6 +15,7 @@ func _ready():
 	change_scene_to("Dormitorio")
 
 func load_scene(scene_name):
+	print("res://Escenas/Lugares/"+scene_name+".tscn")
 	var SCN=load("res://Escenas/Lugares/"+scene_name+".tscn")
 	scenes_loaded[scene_name]=SCN.instance()
 
