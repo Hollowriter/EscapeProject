@@ -24,15 +24,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-<<<<<<< HEAD
 margin_left = -510.834
 margin_top = -149.0
 margin_right = 513.166
-=======
-margin_left = -512.0
-margin_top = -149.0
-margin_right = 512.0
->>>>>>> ea52534d3403182179a2b044467c3c65165080fb
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -110,7 +104,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-<<<<<<< HEAD
 [node name="Item" type="TextureRect" parent="BotonInventario/Espacios/Espacio1"]
 margin_left = -93.0
 margin_right = -29.0
@@ -119,8 +112,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-=======
->>>>>>> ea52534d3403182179a2b044467c3c65165080fb
 [node name="Espacio2" type="TextureButton" parent="BotonInventario/Espacios"]
 self_modulate = Color( 0.254902, 0.141176, 0.141176, 1 )
 margin_left = 433.0
@@ -131,7 +122,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-<<<<<<< HEAD
 [node name="Item" type="TextureRect" parent="BotonInventario/Espacios/Espacio2"]
 margin_left = -187.0
 margin_right = -123.0
@@ -140,8 +130,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-=======
->>>>>>> ea52534d3403182179a2b044467c3c65165080fb
 [node name="Espacio3" type="TextureButton" parent="BotonInventario/Espacios"]
 self_modulate = Color( 0.254902, 0.141176, 0.141176, 1 )
 margin_left = 527.0
@@ -152,7 +140,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-<<<<<<< HEAD
 [node name="Item" type="TextureRect" parent="BotonInventario/Espacios/Espacio3"]
 margin_left = -281.0
 margin_right = -217.0
@@ -161,8 +148,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-=======
->>>>>>> ea52534d3403182179a2b044467c3c65165080fb
 [node name="Espacio4" type="TextureButton" parent="BotonInventario/Espacios"]
 self_modulate = Color( 0.254902, 0.141176, 0.141176, 1 )
 margin_left = 621.0
@@ -173,7 +158,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-<<<<<<< HEAD
 [node name="Item" type="TextureRect" parent="BotonInventario/Espacios/Espacio4"]
 margin_left = -375.0
 margin_right = -311.0
@@ -182,8 +166,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-=======
->>>>>>> ea52534d3403182179a2b044467c3c65165080fb
 [node name="Espacio5" type="TextureButton" parent="BotonInventario/Espacios"]
 self_modulate = Color( 0.254902, 0.141176, 0.141176, 1 )
 margin_left = 715.0
@@ -194,7 +176,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-<<<<<<< HEAD
 [node name="Item" type="TextureRect" parent="BotonInventario/Espacios/Espacio5"]
 margin_left = -469.0
 margin_right = -405.0
@@ -212,8 +193,3 @@ anims/Mostrar = SubResource( 1 )
 [connection signal="mouse_entered" from="BotonInventario/Espacios/Espacio3" to="." method="MousePasoPorArriba3"]
 [connection signal="mouse_entered" from="BotonInventario/Espacios/Espacio4" to="." method="MousePasoPorArriba4"]
 [connection signal="mouse_entered" from="BotonInventario/Espacios/Espacio5" to="." method="MousePasoPorArriba5"]
-=======
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Mostrar = SubResource( 1 )
-[connection signal="pressed" from="BotonInventario" to="." method="BotonInventarioApretado"]
->>>>>>> ea52534d3403182179a2b044467c3c65165080fb

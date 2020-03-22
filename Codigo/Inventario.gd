@@ -3,11 +3,8 @@ extends Control
 var inventarioVisible = false
 
 onready var animationPlayer = $AnimationPlayer
-<<<<<<< HEAD
 onready var escenaPrin = get_parent().get_parent()
 onready var cajaDeTexto = get_parent().get_node("CajaDeTexto")
-=======
->>>>>>> ea52534d3403182179a2b044467c3c65165080fb
 
 func BotonInventarioApretado():
 	if animationPlayer.is_playing():
@@ -24,8 +21,6 @@ func AgregarItem(lugar, imagen, escala=1):
 	var item = get_node("BotonInventario/Espacios/Espacio" + str(lugar) + "/Item")
 	item.texture = imagen
 	item.rect_scale = Vector2(escala,escala)
-<<<<<<< HEAD
-
 
 func LeerDescripcion(numero):
 	pass
