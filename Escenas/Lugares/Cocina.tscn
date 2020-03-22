@@ -24,10 +24,7 @@ margin_top = 99.8267
 margin_right = 635.136
 margin_bottom = 163.827
 agarrable = true
-<<<<<<< HEAD
 texto = "este es un objeto agarrable que esta en tu inventario"
-=======
->>>>>>> ea52534d3403182179a2b044467c3c65165080fb
 
 [node name="CambiarLugar" parent="CambiarNiveles" index="0" instance=ExtResource( 2 )]
 margin_left = 948.664

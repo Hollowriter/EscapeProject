@@ -15,7 +15,6 @@ func _ready():
 	change_scene_to("Dormitorio")
 
 func load_scene(scene_name):
-	print("res://Escenas/Lugares/"+scene_name+".tscn")
 	var SCN=load("res://Escenas/Lugares/"+scene_name+".tscn")
 	scenes_loaded[scene_name]=SCN.instance()
 
@@ -24,7 +23,9 @@ func change_scene_to(scene_name):
 	add_child(scenes_loaded[scene_name])
 	if scenes_loaded[scene_name].has_method("on_enter_scene"): scenes_loaded[scene_name].on_enter_scene()
 	last_scene=scenes_loaded[scene_name]
+	
 	inventario = last_scene.get_node("Inventario")
+	inventario.BotonInventarioApretado(false)
 	for i in range(espacios.size()):
 		if espacios[i] != "":
 			inventario.AgregarItem(i, contenido[i][0])

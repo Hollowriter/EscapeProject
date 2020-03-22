@@ -6,16 +6,25 @@ onready var animationPlayer = $AnimationPlayer
 onready var escenaPrin = get_parent().get_parent()
 onready var cajaDeTexto = get_parent().get_node("CajaDeTexto")
 
-func BotonInventarioApretado():
+func BotonInventarioApretado(valor = null):
 	if animationPlayer.is_playing():
 		return
-	
-	if inventarioVisible:
-		animationPlayer.play_backwards("Mostrar")
+	if valor == null:
+		if inventarioVisible:
+			animationPlayer.play_backwards("Mostrar")
+		else:
+			animationPlayer.play("Mostrar")
+		
+		inventarioVisible = !inventarioVisible
 	else:
-		animationPlayer.play("Mostrar")
-	
-	inventarioVisible = !inventarioVisible
+		if valor == inventarioVisible:
+			return
+		if valor:
+			animationPlayer.play("Mostrar")
+		else:
+			animationPlayer.play_backwards("Mostrar")
+		
+		inventarioVisible = valor
 
 func AgregarItem(lugar, imagen, escala=1):
 	var item = get_node("BotonInventario/Espacios/Espacio" + str(lugar) + "/Item")
