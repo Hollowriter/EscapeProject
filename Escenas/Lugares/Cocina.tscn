@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Escenas/Lugares/LugarBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Escenas/CambiarLugar.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Visuales/Fondos/cocina.jpg" type="Texture" id=3]
+[ext_resource path="res://Escenas/Item.tscn" type="PackedScene" id=4]
+
+[node name="Lugar" instance=ExtResource( 1 )]
+textoAlEntrar = "Entraste a la cocina"
+
+[node name="Fondo" parent="." index="0"]
+texture = ExtResource( 3 )
+
+[node name="Item1" parent="Interactuables" index="0" instance=ExtResource( 4 )]
+margin_left = 73.4216
+margin_top = 134.9
+margin_right = 137.422
+margin_bottom = 198.901
+texto = "soy un item"
+
+[node name="Item2" parent="Interactuables" index="1" instance=ExtResource( 4 )]
+margin_left = 571.136
+margin_top = 99.8267
+margin_right = 635.136
+margin_bottom = 163.827
+texto = "soy otro Item"
+
+[node name="CambiarLugar" parent="CambiarNiveles" index="0" instance=ExtResource( 2 )]
+margin_left = 948.664
+margin_top = 317.335
+margin_right = -11.336
+margin_bottom = -218.665
+aDondeIr = "Dormitorio"

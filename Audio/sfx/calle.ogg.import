@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/calle.ogg-9852911472472e8d3707f42336938c77.oggstr"
+
+[deps]
+
+source_file="res://Audio/sfx/calle.ogg"
+dest_files=[ "res://.import/calle.ogg-9852911472472e8d3707f42336938c77.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

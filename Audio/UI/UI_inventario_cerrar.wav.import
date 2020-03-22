@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/UI_inventario_cerrar.wav-00ce3d46952722a647f11a9a4fb20877.sample"
+
+[deps]
+
+source_file="res://Audio/UI/UI_inventario_cerrar.wav"
+dest_files=[ "res://.import/UI_inventario_cerrar.wav-00ce3d46952722a647f11a9a4fb20877.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

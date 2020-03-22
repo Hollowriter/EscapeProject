@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/sfx_transicion_caminarescaleras.wav-d616a5448f8c6b2b00703565f7877164.sample"
+
+[deps]
+
+source_file="res://Audio/sfx/sfx_transicion_caminarescaleras.wav"
+dest_files=[ "res://.import/sfx_transicion_caminarescaleras.wav-d616a5448f8c6b2b00703565f7877164.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
