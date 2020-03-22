@@ -1,6 +1,5 @@
 extends Control
 
-var espacios = ["","","","","",""]
 var inventarioVisible = false
 
 onready var animationPlayer = $AnimationPlayer
@@ -15,3 +14,8 @@ func BotonInventarioApretado():
 		animationPlayer.play("Mostrar")
 	
 	inventarioVisible = !inventarioVisible
+
+func AgregarItem(lugar, imagen, escala=1):
+	var item = get_node("BotonInventario/Espacios/Espacio" + str(lugar) + "/Item")
+	item.texture = imagen
+	item.rect_scale = Vector2(escala,escala)

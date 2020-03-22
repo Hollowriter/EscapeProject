@@ -18,12 +18,12 @@ margin_right = 137.422
 margin_bottom = 198.901
 texto = "soy un item"
 
-[node name="Item2" parent="Interactuables" index="1" instance=ExtResource( 4 )]
+[node name="Coleccionable" parent="Interactuables" index="1" instance=ExtResource( 4 )]
 margin_left = 571.136
 margin_top = 99.8267
 margin_right = 635.136
 margin_bottom = 163.827
-texto = "soy otro Item"
+agarrable = true
 
 [node name="CambiarLugar" parent="CambiarNiveles" index="0" instance=ExtResource( 2 )]
 margin_left = 948.664

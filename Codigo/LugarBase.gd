@@ -2,8 +2,7 @@ extends CanvasLayer
 
 export var textoAlEntrar = ""
 
-onready var cajaDeTexto = get_parent().get_parent()
+onready var cajaDeTexto = $CajaDeTexto
 
 func on_enter_scene():
-	print(cajaDeTexto.name)
-	get_node("CajaDeTexto").NuevoTexto(textoAlEntrar)
+	cajaDeTexto.NuevoTexto(textoAlEntrar)
