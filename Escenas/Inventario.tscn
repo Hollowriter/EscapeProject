@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Visuales/icon.png" type="Texture" id=1]
 [ext_resource path="res://Codigo/Inventario.gd" type="Script" id=2]
+[ext_resource path="res://Audio/UI/UI_inventario_abrir.wav" type="AudioStream" id=3]
+[ext_resource path="res://Audio/UI/UI_inventario_cerrar.wav" type="AudioStream" id=4]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Mostrar"
@@ -186,6 +188,12 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Mostrar = SubResource( 1 )
+
+[node name="AbrirSonido" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="CerrarSonido" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
 [connection signal="pressed" from="BotonInventario" to="." method="BotonInventarioApretado"]
 [connection signal="mouse_entered" from="BotonInventario/Espacios/Espacio0" to="." method="MousePasoPorArriba0"]
 [connection signal="mouse_entered" from="BotonInventario/Espacios/Espacio1" to="." method="MousePasoPorArriba1"]

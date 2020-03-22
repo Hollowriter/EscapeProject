@@ -3,6 +3,7 @@ extends Control
 var inventarioVisible = false
 
 onready var animationPlayer = $AnimationPlayer
+onready var sonido = $AbrirSonido
 onready var escenaPrin = get_parent().get_parent()
 onready var cajaDeTexto = get_parent().get_node("CajaDeTexto")
 
@@ -11,8 +12,12 @@ func BotonInventarioApretado(valor = null):
 		return
 	if valor == null:
 		if inventarioVisible:
+			sonido = $CerrarSonido
+			sonido.play()
 			animationPlayer.play_backwards("Mostrar")
 		else:
+			sonido = $AbrirSonido
+			sonido.play()
 			animationPlayer.play("Mostrar")
 		
 		inventarioVisible = !inventarioVisible
@@ -20,8 +25,12 @@ func BotonInventarioApretado(valor = null):
 		if valor == inventarioVisible:
 			return
 		if valor:
+			sonido = $AbrirSonido
+			sonido.play()
 			animationPlayer.play("Mostrar")
 		else:
+			sonido = $CerrarSonido
+			sonido.play()
 			animationPlayer.play_backwards("Mostrar")
 		
 		inventarioVisible = valor
