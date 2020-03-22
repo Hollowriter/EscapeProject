@@ -1,14 +1,18 @@
 extends Node
 
+var espacios = ["","","","","",""]
+var contenido = ["","","","","",""]
 var scenes_loaded={}
 var last_scene
+
+onready var inventario
 
 func _ready():
 	load_scene("Cocina")
 	load_scene("Dormitorio")
 	#load_scene("Calle")
 	yield( get_tree().create_timer(0.5), "timeout")
-	change_scene_to("Cocina")
+	change_scene_to("Dormitorio")
 
 func load_scene(scene_name):
 	var SCN=load("res://Escenas/Lugares/"+scene_name+".tscn")
@@ -19,3 +23,16 @@ func change_scene_to(scene_name):
 	add_child(scenes_loaded[scene_name])
 	if scenes_loaded[scene_name].has_method("on_enter_scene"): scenes_loaded[scene_name].on_enter_scene()
 	last_scene=scenes_loaded[scene_name]
+	inventario = last_scene.get_node("Inventario")
+	for i in range(espacios.size()):
+		if espacios[i] != "":
+			inventario.AgregarItem(i, contenido[i][0])
+
+func AgarrarItemClickeado(item):
+	for i in range(espacios.size()):
+		if espacios[i] == "":
+			espacios[i] = item.name
+			item.queue_free()
+			contenido[i] = [item.texture_normal]
+			inventario.AgregarItem(i, item.texture_normal)
+			return

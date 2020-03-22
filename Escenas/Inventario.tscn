@@ -1,0 +1,149 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Visuales/icon.png" type="Texture" id=1]
+[ext_resource path="res://Codigo/Inventario.gd" type="Script" id=2]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Mostrar"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("BotonInventario:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 480, 80 ), Vector2( 480, 90 ), Vector2( 480, -30 ), Vector2( 480, -20 ) ]
+}
+
+[node name="Inventario" type="Control"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -512.0
+margin_top = -149.0
+margin_right = 512.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotonInventario" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -32.0
+margin_top = -69.0
+margin_right = 32.0
+margin_bottom = -4.99998
+texture_normal = ExtResource( 1 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Fondo" type="ColorRect" parent="BotonInventario"]
+show_behind_parent = true
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -293.0
+margin_top = -8.00012
+margin_right = 294.0
+margin_bottom = 135.0
+color = Color( 0.858824, 0.533333, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Espacios" type="HBoxContainer" parent="BotonInventario"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -480.0
+margin_top = 50.0
+margin_right = 481.0
+margin_bottom = 130.0
+custom_constants/separation = 30
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Espacio0" type="TextureButton" parent="BotonInventario/Espacios"]
+self_modulate = Color( 0.254902, 0.141176, 0.141176, 1 )
+margin_left = 245.0
+margin_right = 309.0
+margin_bottom = 79.0
+texture_normal = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Item" type="TextureRect" parent="BotonInventario/Espacios/Espacio0"]
+margin_left = 1.0
+margin_right = 65.0
+margin_bottom = 64.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Espacio1" type="TextureButton" parent="BotonInventario/Espacios"]
+self_modulate = Color( 0.254902, 0.141176, 0.141176, 1 )
+margin_left = 339.0
+margin_right = 403.0
+margin_bottom = 79.0
+texture_normal = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Espacio2" type="TextureButton" parent="BotonInventario/Espacios"]
+self_modulate = Color( 0.254902, 0.141176, 0.141176, 1 )
+margin_left = 433.0
+margin_right = 497.0
+margin_bottom = 79.0
+texture_normal = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Espacio3" type="TextureButton" parent="BotonInventario/Espacios"]
+self_modulate = Color( 0.254902, 0.141176, 0.141176, 1 )
+margin_left = 527.0
+margin_right = 591.0
+margin_bottom = 79.0
+texture_normal = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Espacio4" type="TextureButton" parent="BotonInventario/Espacios"]
+self_modulate = Color( 0.254902, 0.141176, 0.141176, 1 )
+margin_left = 621.0
+margin_right = 685.0
+margin_bottom = 79.0
+texture_normal = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Espacio5" type="TextureButton" parent="BotonInventario/Espacios"]
+self_modulate = Color( 0.254902, 0.141176, 0.141176, 1 )
+margin_left = 715.0
+margin_right = 779.0
+margin_bottom = 79.0
+texture_normal = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Mostrar = SubResource( 1 )
+[connection signal="pressed" from="BotonInventario" to="." method="BotonInventarioApretado"]
