@@ -1,6 +1,7 @@
 extends TextureButton
 
 signal seleccionado
+signal agarrado
 
 export(bool) var agarrable = false
 export(String) var texto = ""
@@ -8,8 +9,11 @@ export(String) var texto = ""
 onready var animationPlayer = $AnimationPlayer
 
 func Seleccionado():
-	emit_signal("seleccionado")
-	animationPlayer.play("seleccionado")
+	if agarrable:
+		emit_signal("agarrado")
+	else:
+		emit_signal("seleccionado")
+		animationPlayer.play("seleccionado")
 
 func Deseleccionar():
 	animationPlayer.play("normal")
