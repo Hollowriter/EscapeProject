@@ -2,6 +2,7 @@ extends Node
 
 var espacios = ["","","","","",""]
 var contenido = [[],[],[],[],[],[]]
+var itemSeleccionado
 var scenes_loaded={}
 var last_scene
 
@@ -24,6 +25,7 @@ func change_scene_to(scene_name):
 	if scenes_loaded[scene_name].has_method("on_enter_scene"): scenes_loaded[scene_name].on_enter_scene()
 	last_scene=scenes_loaded[scene_name]
 	
+	itemSeleccionado = null
 	inventario = last_scene.get_node("Inventario")
 	inventario.BotonInventarioApretado(false)
 	for i in range(espacios.size()):
@@ -38,3 +40,11 @@ func AgarrarItemClickeado(item):
 			contenido[i] = [item.texture_normal, item.texto]
 			inventario.AgregarItem(i, item.texture_normal)
 			return
+
+func SoltarItem(nombre):
+	for i in range(espacios.size()):
+		if espacios[i] == nombre:
+			espacios[i] = ""
+			contenido[i] = []
+			inventario.AgregarItem(i, null)
+			print(i)
