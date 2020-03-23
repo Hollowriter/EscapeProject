@@ -10,10 +10,10 @@ onready var inventario
 
 func _ready():
 	load_scene("Cocina")
-	load_scene("Dormitorio")
+	load_scene("Living")
 	#load_scene("Calle")
 	yield( get_tree().create_timer(0.5), "timeout")
-	change_scene_to("Dormitorio")
+	change_scene_to("Living")
 
 func load_scene(scene_name):
 	var SCN=load("res://Escenas/Lugares/"+scene_name+".tscn")
