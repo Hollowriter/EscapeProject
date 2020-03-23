@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/sfx_pelea.ogg-88b93c799a9232ed4b2f8d52c8d29ddd.oggstr"
+
+[deps]
+
+source_file="res://Audio/sfx/sfx_pelea.ogg"
+dest_files=[ "res://.import/sfx_pelea.ogg-88b93c799a9232ed4b2f8d52c8d29ddd.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

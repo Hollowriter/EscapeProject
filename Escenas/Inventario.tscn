@@ -1,10 +1,32 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Visuales/icon.png" type="Texture" id=1]
-[ext_resource path="res://Codigo/Inventario.gd" type="Script" id=2]
+[ext_resource path="res://Codigo/Inventario.gd" type="Script" id=1]
+[ext_resource path="res://Visuales/icon.png" type="Texture" id=2]
+[ext_resource path="res://Escenas/EspacioDeInventario.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Audio/UI/UI_inventario_cerrar.wav" type="AudioStream" id=4]
+[ext_resource path="res://Audio/UI/UI_inventario_abrir.wav" type="AudioStream" id=5]
 
 [sub_resource type="Animation" id=1]
-resource_name = "Mostrar"
+resource_name = "Elegido5"
+length = 0.5
+
+[sub_resource type="Animation" id=2]
+resource_name = "Elegido5 (copy)"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("BotonInventario/Espacio0:rect_rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.301, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 10.0, 0.0, 0.0, -10.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=3]
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("BotonInventario:rect_position")
@@ -18,16 +40,28 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Vector2( 480, 80 ), Vector2( 480, 90 ), Vector2( 480, -30 ), Vector2( 480, -20 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("BotonInventario/Espacio0:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
 
 [node name="Inventario" type="Control"]
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -512.0
+margin_left = -510.834
 margin_top = -149.0
-margin_right = 512.0
-script = ExtResource( 2 )
+margin_right = 513.166
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -40,8 +74,8 @@ anchor_bottom = 1.0
 margin_left = -32.0
 margin_top = -69.0
 margin_right = 32.0
-margin_bottom = -4.99998
-texture_normal = ExtResource( 1 )
+margin_bottom = -5.0
+texture_normal = ExtResource( 2 )
 stretch_mode = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -62,88 +96,80 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Espacios" type="HBoxContainer" parent="BotonInventario"]
+[node name="Espacio0" parent="BotonInventario" instance=ExtResource( 3 )]
+anchor_left = 0.5
 anchor_top = 0.5
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -480.0
-margin_top = 50.0
-margin_right = 481.0
-margin_bottom = 130.0
-custom_constants/separation = 30
-alignment = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_left = -290.0
+margin_top = 45.0
+margin_right = -210.0
+margin_bottom = 125.0
 
-[node name="Espacio0" type="TextureButton" parent="BotonInventario/Espacios"]
-self_modulate = Color( 0.254902, 0.141176, 0.141176, 1 )
-margin_left = 245.0
-margin_right = 309.0
-margin_bottom = 79.0
-texture_normal = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Espacio1" parent="BotonInventario" instance=ExtResource( 3 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -190.0
+margin_top = 45.0
+margin_right = -110.0
+margin_bottom = 125.0
 
-[node name="Item" type="TextureRect" parent="BotonInventario/Espacios/Espacio0"]
-margin_left = 1.0
-margin_right = 65.0
-margin_bottom = 64.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Espacio2" parent="BotonInventario" instance=ExtResource( 3 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -90.0
+margin_top = 45.0
+margin_right = -10.0
+margin_bottom = 125.0
 
-[node name="Espacio1" type="TextureButton" parent="BotonInventario/Espacios"]
-self_modulate = Color( 0.254902, 0.141176, 0.141176, 1 )
-margin_left = 339.0
-margin_right = 403.0
-margin_bottom = 79.0
-texture_normal = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Espacio3" parent="BotonInventario" instance=ExtResource( 3 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 10.0
+margin_top = 45.0
+margin_right = 90.0
+margin_bottom = 125.0
 
-[node name="Espacio2" type="TextureButton" parent="BotonInventario/Espacios"]
-self_modulate = Color( 0.254902, 0.141176, 0.141176, 1 )
-margin_left = 433.0
-margin_right = 497.0
-margin_bottom = 79.0
-texture_normal = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Espacio4" parent="BotonInventario" instance=ExtResource( 3 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 110.0
+margin_top = 45.0
+margin_right = 190.0
+margin_bottom = 125.0
 
-[node name="Espacio3" type="TextureButton" parent="BotonInventario/Espacios"]
-self_modulate = Color( 0.254902, 0.141176, 0.141176, 1 )
-margin_left = 527.0
-margin_right = 591.0
-margin_bottom = 79.0
-texture_normal = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Espacio4" type="TextureButton" parent="BotonInventario/Espacios"]
-self_modulate = Color( 0.254902, 0.141176, 0.141176, 1 )
-margin_left = 621.0
-margin_right = 685.0
-margin_bottom = 79.0
-texture_normal = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Espacio5" type="TextureButton" parent="BotonInventario/Espacios"]
-self_modulate = Color( 0.254902, 0.141176, 0.141176, 1 )
-margin_left = 715.0
-margin_right = 779.0
-margin_bottom = 79.0
-texture_normal = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Espacio5" parent="BotonInventario" instance=ExtResource( 3 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 210.0
+margin_top = 45.0
+margin_right = 290.0
+margin_bottom = 125.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Mostrar = SubResource( 1 )
+anims/Elegido5 = SubResource( 1 )
+"anims/Elegido5 (copy)" = SubResource( 2 )
+anims/Mostrar = SubResource( 3 )
+
+[node name="AbrirSonido" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="CerrarSonido" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
 [connection signal="pressed" from="BotonInventario" to="." method="BotonInventarioApretado"]
+[connection signal="pressed" from="BotonInventario/Espacio0" to="." method="SeleccionarItem" binds= [ 0 ]]
+[connection signal="pressed" from="BotonInventario/Espacio1" to="." method="SeleccionarItem" binds= [ 1 ]]
+[connection signal="pressed" from="BotonInventario/Espacio2" to="." method="SeleccionarItem" binds= [ 2 ]]
+[connection signal="pressed" from="BotonInventario/Espacio3" to="." method="SeleccionarItem" binds= [ 3 ]]
+[connection signal="pressed" from="BotonInventario/Espacio4" to="." method="SeleccionarItem" binds= [ 4 ]]
+[connection signal="pressed" from="BotonInventario/Espacio5" to="." method="SeleccionarItem" binds= [ 5 ]]
