@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Codigo/LugarBase.gd" type="Script" id=1]
 [ext_resource path="res://Visuales/icon.png" type="Texture" id=2]
 [ext_resource path="res://Escenas/CajaDeTexto.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Codigo/Interactuables.gd" type="Script" id=4]
-[ext_resource path="res://Escenas/Inventario.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Escenas/CambiarLugar.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Escenas/Inventario.tscn" type="PackedScene" id=6]
 
 [node name="Lugar" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -39,4 +40,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Inventario" parent="." instance=ExtResource( 5 )]
+[node name="CambiarLugar" parent="CambiarNiveles" instance=ExtResource( 5 )]
+margin_left = 227.611
+margin_top = -118.932
+margin_right = 291.611
+margin_bottom = -54.9317
+
+[node name="CambiarLugar2" parent="CambiarNiveles" instance=ExtResource( 5 )]
+margin_left = 457.272
+margin_top = -118.932
+margin_right = 521.272
+margin_bottom = -54.9317
+
+[node name="CambiarLugar3" parent="CambiarNiveles" instance=ExtResource( 5 )]
+margin_left = 676.68
+margin_top = -118.932
+margin_right = 740.68
+margin_bottom = -54.9317
+
+[node name="Inventario" parent="." instance=ExtResource( 6 )]

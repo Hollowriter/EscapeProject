@@ -36,20 +36,6 @@ margin_top = 24.1405
 margin_right = 102.26
 margin_bottom = 88.1415
 
-[node name="Bolsa" parent="Interactuables" index="4" instance=ExtResource( 3 )]
-margin_left = 38.2599
-margin_top = 24.1405
-margin_right = 102.26
-margin_bottom = 88.1415
-agarrable = true
-
-[node name="Alcohol en gel" parent="Interactuables" index="5" instance=ExtResource( 3 )]
-margin_left = 38.2599
-margin_top = 24.1405
-margin_right = 102.26
-margin_bottom = 88.1415
-agarrable = true
-
 [node name="CambiarLugar" parent="CambiarNiveles" index="0" instance=ExtResource( 4 )]
 margin_left = 948.664
 margin_top = 317.335

@@ -37,7 +37,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 0.94902, 0.933333, 0.0196078, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[node name="Interactuable" type="TextureButton"]
+[node name="Item" type="TextureButton"]
 margin_left = 35.0074
 margin_top = 36.3597
 margin_right = 99.0074
@@ -54,5 +54,11 @@ anims/normal = SubResource( 1 )
 anims/seleccionado = SubResource( 2 )
 
 [node name="Sonido" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="SonidoPista" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="SonidoAgarrado" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 [connection signal="pressed" from="." to="." method="Seleccionado"]
