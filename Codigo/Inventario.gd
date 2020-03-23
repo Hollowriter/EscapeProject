@@ -27,34 +27,21 @@ func BotonInventarioApretado(valor = null):
 		inventarioVisible = valor
 
 func AgregarItem(lugar, imagen, escala=1):
-	var item = get_node("BotonInventario/Espacios/Espacio" + str(lugar) + "/Item")
+	var item = get_node("BotonInventario/Espacio" + str(lugar) + "/Item")
 	item.texture = imagen
 	item.rect_scale = Vector2(escala,escala)
 
-func LeerDescripcion(numero):
-	pass
-
 func SeleccionarItem(numero):
-	pass
-
-func MostrarDescripcion(numero):
 	if escenaPrin.contenido[numero].size() > 1:
 		cajaDeTexto.NuevoTexto(escenaPrin.contenido[numero][1])
-
-func MousePasoPorArriba0():
-	MostrarDescripcion(0)
-
-func MousePasoPorArriba1():
-	MostrarDescripcion(1)
-
-func MousePasoPorArriba2():
-	MostrarDescripcion(2)
-
-func MousePasoPorArriba3():
-	MostrarDescripcion(3)
-
-func MousePasoPorArriba4():
-	MostrarDescripcion(4)
-
-func MousePasoPorArriba5():
-	MostrarDescripcion(5)
+	for i in range(6):
+		var espacio = get_node("BotonInventario/Espacio" + str(i))
+		if i == numero:
+			if escenaPrin.espacios[numero] != "":
+				espacio.self_modulate = Color("#555555")
+				escenaPrin.itemSeleccionado = escenaPrin.espacios[numero]
+			else:
+				espacio.self_modulate = Color("#000000")
+				escenaPrin.itemSeleccionado = null
+		else:
+			espacio.self_modulate = Color("#000000")
