@@ -18,6 +18,9 @@ func _ready():
 func load_scene(scene_name):
 	var SCN=load("res://Escenas/Lugares/"+scene_name+".tscn")
 	scenes_loaded[scene_name]=SCN.instance()
+	
+func drop_scene(scene_name): # Para poder borrar escenas
+	scenes_loaded[scene_name].queue_free()
 
 func change_scene_to(scene_name):
 	if last_scene: remove_child(last_scene)
