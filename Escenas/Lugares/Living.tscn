@@ -41,28 +41,35 @@ margin_top = 308.751
 margin_right = 801.343
 margin_bottom = 372.752
 
-[node name="Puerta" parent="Interactuables" index="5" instance=ExtResource( 3 )]
-margin_left = 287.42
-margin_top = 235.143
-margin_right = 351.42
-margin_bottom = 299.144
+[node name="CambiarNivel" parent="Interactuables" index="5" instance=ExtResource( 4 )]
+margin_left = 447.563
+margin_top = 119.713
+margin_right = 511.563
+margin_bottom = 183.713
+nivelCarga = 2
+
+[node name="Puerta" parent="Interactuables" index="6" instance=ExtResource( 3 )]
+margin_left = 439.0
+margin_top = 118.0
+margin_right = 513.0
+margin_bottom = 190.0
 necesitaA = "Llaves"
 
-[node name="Llaves" parent="Interactuables" index="6" instance=ExtResource( 3 )]
+[node name="Llaves" parent="Interactuables" index="7" instance=ExtResource( 3 )]
 margin_left = 191.128
 margin_top = 317.421
 margin_right = 255.128
 margin_bottom = 381.422
 agarrable = true
 
-[node name="Billetera" parent="Interactuables" index="7" instance=ExtResource( 3 )]
+[node name="Billetera" parent="Interactuables" index="8" instance=ExtResource( 3 )]
 margin_left = 724.308
 margin_top = 250.616
 margin_right = 788.308
 margin_bottom = 314.617
 agarrable = true
 
-[node name="Documento" parent="Interactuables" index="8" instance=ExtResource( 3 )]
+[node name="Documento" parent="Interactuables" index="9" instance=ExtResource( 3 )]
 margin_left = 767.625
 margin_top = 199.988
 margin_right = 831.625
@@ -81,13 +88,6 @@ margin_left = 455.912
 margin_top = -117.572
 margin_right = 519.912
 margin_bottom = -53.5713
-
-[node name="CambiarNivel" parent="CambiarNiveles" index="3" instance=ExtResource( 4 )]
-margin_left = 447.563
-margin_top = 119.713
-margin_right = 511.563
-margin_bottom = 183.713
-nivelCarga = 2
 
 [node name="Inventario" parent="." index="4"]
 margin_left = -508.113
