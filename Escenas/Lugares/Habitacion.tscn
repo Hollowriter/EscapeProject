@@ -4,39 +4,63 @@
 [ext_resource path="res://Escenas/Item.tscn" type="PackedScene" id=2]
 
 [node name="Lugar" instance=ExtResource( 1 )]
+textoAlEntrar = "Habitacion"
 
 [node name="Cama" parent="Interactuables" index="0" instance=ExtResource( 2 )]
+margin_left = 499.142
+margin_top = 298.315
+margin_right = 563.142
+margin_bottom = 362.315
+texto = "Aca deje mi remera para estar adentro. Sera mejor que me la cambie."
 
 [node name="Computadora" parent="Interactuables" index="1" instance=ExtResource( 2 )]
-margin_left = 117.029
-margin_top = 29.8843
-margin_right = 181.029
-margin_bottom = 93.8846
+margin_left = 204.933
+margin_top = 225.032
+margin_right = 268.933
+margin_bottom = 289.032
+texto = "Espero que haya vuelto internet."
 
 [node name="Silla" parent="Interactuables" index="2" instance=ExtResource( 2 )]
-margin_left = 235.745
-margin_top = 34.2013
-margin_right = 299.745
-margin_bottom = 98.2016
+margin_left = 202.341
+margin_top = 311.979
+margin_right = 266.341
+margin_bottom = 375.979
+texto = "Tengo que cambiar esta silla."
 
 [node name="Placard" parent="Interactuables" index="3" instance=ExtResource( 2 )]
-margin_left = 397.63
-margin_top = 44.9936
-margin_right = 461.63
-margin_bottom = 108.994
+margin_left = 923.298
+margin_top = 270.029
+margin_right = 987.298
+margin_bottom = 334.029
 rect_pivot_offset = Vector2( 1364.99, 3.6403 )
+texto = "Tengo ropa para estar adentro y para estar afuera"
 
 [node name="Ventana" parent="Interactuables" index="4" instance=ExtResource( 2 )]
-margin_left = 477.494
-margin_top = 40.6767
-margin_right = 541.494
-margin_bottom = 104.677
+margin_left = 663.851
+margin_top = 160.227
+margin_right = 727.851
+margin_bottom = 224.227
 rect_pivot_offset = Vector2( 1364.99, 3.6403 )
+texto = "No hay casi nadie en la calle."
 
 [node name="Ropa" parent="Interactuables" index="5" instance=ExtResource( 2 )]
-margin_left = 37.1658
-margin_top = 129.174
-margin_right = 101.166
-margin_bottom = 193.174
+margin_left = 501.301
+margin_top = 217.078
+margin_right = 565.301
+margin_bottom = 281.078
 rect_pivot_offset = Vector2( 1364.99, 3.6403 )
 agarrable = true
+
+[node name="CambiarLugar" parent="CambiarNiveles" index="0"]
+margin_left = 41.0617
+margin_top = 261.341
+margin_right = 105.062
+margin_bottom = 325.342
+aDondeIr = "Living2"
+
+[node name="CambiarLugar2" parent="CambiarNiveles" index="1"]
+margin_left = 775.362
+margin_top = 263.733
+margin_right = 839.362
+margin_bottom = 327.733
+aDondeIr = "Bano"

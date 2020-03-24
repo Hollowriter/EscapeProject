@@ -1,66 +1,93 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Escenas/Lugares/LugarBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenas/Item.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Escenas/BorrarNivel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Escenas/CambiarNivel.tscn" type="PackedScene" id=4]
 
 [node name="Lugar" instance=ExtResource( 1 )]
+textoAlEntrar = "Farmacia"
 
 [node name="CajaRegistradora" parent="Interactuables" index="0" instance=ExtResource( 2 )]
+margin_left = 237.601
+margin_top = 293.498
+margin_right = 301.601
+margin_bottom = 357.499
+texto = "Deberia pagar antes de irme"
 
 [node name="Gondola1" parent="Interactuables" index="1" instance=ExtResource( 2 )]
-margin_left = 134.979
-margin_top = 31.8155
-margin_right = 198.979
-margin_bottom = 95.8158
+margin_left = 441.482
+margin_top = 290.832
+margin_right = 505.482
+margin_bottom = 354.832
+texto = "Esta lleno de suplementos de dieta"
 
 [node name="Gondola2" parent="Interactuables" index="2" instance=ExtResource( 2 )]
-margin_left = 216.773
-margin_top = 27.2714
-margin_right = 280.773
-margin_bottom = 91.2717
+margin_left = 592.347
+margin_top = 284.129
+margin_right = 656.347
+margin_bottom = 348.13
+texto = "Por aca debe estar la medicina para los nervios"
 
 [node name="Gondola3" parent="Interactuables" index="3" instance=ExtResource( 2 )]
-margin_left = 309.928
-margin_top = 31.8155
-margin_right = 373.928
-margin_bottom = 95.8158
+margin_left = 721.98
+margin_top = 288.673
+margin_right = 785.98
+margin_bottom = 352.674
+texto = "El inhalador para mi hermana deberia estar por esta gondola"
 
 [node name="Reloj" parent="Interactuables" index="4" instance=ExtResource( 2 )]
-margin_left = 393.995
-margin_top = 24.9993
-margin_right = 457.995
-margin_bottom = 88.9996
+margin_left = 316.495
+margin_top = 78.2757
+margin_right = 380.495
+margin_bottom = 142.276
+texto = "Recien es mediodia"
 
 [node name="Puerta" parent="Interactuables" index="5" instance=ExtResource( 2 )]
-margin_left = 505.327
-margin_top = 29.5435
-margin_right = 569.327
-margin_bottom = 93.5438
+margin_left = 54.7555
+margin_top = 181.0
+margin_right = 118.755
+margin_bottom = 245.0
+texto = "Puerta"
 
-[node name="MedicinaNervios" parent="Interactuables" index="6" instance=ExtResource( 2 )]
-margin_left = 150.883
-margin_top = 115.882
-margin_right = 214.883
-margin_bottom = 179.883
+[node name="CambiarNivel" parent="Interactuables" index="6" instance=ExtResource( 4 )]
+margin_left = 52.5965
+margin_top = 257.138
+margin_right = -907.404
+margin_bottom = -278.862
+nivelCarga = 5
+
+[node name="MedicinaNervios" parent="Interactuables" index="7" instance=ExtResource( 2 )]
+margin_left = 596.979
+margin_top = 201.595
+margin_right = 660.979
+margin_bottom = 265.596
 agarrable = true
 
-[node name="Disparador" parent="Interactuables" index="7" instance=ExtResource( 2 )]
-margin_left = 53.1839
-margin_top = 118.154
-margin_right = 117.184
-margin_bottom = 182.155
+[node name="Disparador" parent="Interactuables" index="8" instance=ExtResource( 2 )]
+margin_left = 731.094
+margin_top = 196.075
+margin_right = 795.094
+margin_bottom = 260.076
 agarrable = true
 
-[node name="SuplementoDieta" parent="Interactuables" index="8" instance=ExtResource( 2 )]
-margin_left = 53.1839
-margin_top = 118.154
-margin_right = 117.184
-margin_bottom = 182.155
+[node name="SuplementoDieta" parent="Interactuables" index="9" instance=ExtResource( 2 )]
+margin_left = 442.788
+margin_top = 201.919
+margin_right = 506.788
+margin_bottom = 265.92
 agarrable = true
 
-[node name="Recibo" parent="Interactuables" index="9" instance=ExtResource( 2 )]
-margin_left = 53.1839
-margin_top = 118.154
-margin_right = 117.184
-margin_bottom = 182.155
+[node name="Recibo" parent="Interactuables" index="10" instance=ExtResource( 2 )]
+margin_left = 238.246
+margin_top = 201.919
+margin_right = 302.246
+margin_bottom = 265.92
 agarrable = true
+
+[node name="BorrarNivel" parent="CambiarNiveles" index="3" instance=ExtResource( 3 )]
+margin_left = 854.754
+margin_top = 17.2677
+margin_right = 918.754
+margin_bottom = 81.2677
+nivelBorra = 2

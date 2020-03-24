@@ -3,26 +3,44 @@
 [ext_resource path="res://Escenas/Lugares/LugarBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenas/Item.tscn" type="PackedScene" id=2]
 
-[node name="Lugar" index="0" instance=ExtResource( 1 )]
+[node name="Lugar" instance=ExtResource( 1 )]
+textoAlEntrar = "Bano"
 
 [node name="Pileta" parent="Interactuables" index="0" instance=ExtResource( 2 )]
+margin_left = 766.854
+margin_top = 268.35
+margin_right = 830.854
+margin_bottom = 332.351
 agarrable = true
+texto = "Y... Listo, manos limpias."
 
 [node name="Espejo" parent="Interactuables" index="1" instance=ExtResource( 2 )]
-margin_left = 127.822
-margin_top = 34.2012
-margin_right = 191.822
-margin_bottom = 98.2015
+margin_left = 766.394
+margin_top = 180.092
+margin_right = 830.394
+margin_bottom = 244.093
 agarrable = true
+texto = "Que bonito soy"
 
 [node name="Inodoro" parent="Interactuables" index="2" instance=ExtResource( 2 )]
-margin_left = 231.428
-margin_top = 27.7258
-margin_right = 295.428
-margin_bottom = 91.7261
+margin_left = 645.185
+margin_top = 321.9
+margin_right = 709.185
+margin_bottom = 385.9
 agarrable = true
+texto = "No comi nada todavia como para tener ganas"
 
 [node name="Ducha" parent="Interactuables" index="3" instance=ExtResource( 2 )]
-margin_left = 335.035
-margin_right = 399.035
+margin_left = 904.249
+margin_top = 230.084
+margin_right = 968.249
+margin_bottom = 294.084
 agarrable = true
+texto = "Me bañare mas a la noche."
+
+[node name="CambiarLugar2" parent="CambiarNiveles" index="1"]
+margin_left = 88.9569
+margin_top = 278.083
+margin_right = 152.957
+margin_bottom = 342.083
+aDondeIr = "Habitacion"
