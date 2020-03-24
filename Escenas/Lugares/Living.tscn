@@ -22,24 +22,28 @@ margin_left = 827.844
 margin_top = 305.883
 margin_right = 891.844
 margin_bottom = 369.884
+texto = "Creo que es la primera vez que estoy contento por no tener que estar sentado"
 
 [node name="Mesa" parent="Interactuables" index="2" instance=ExtResource( 3 )]
 margin_left = 662.093
 margin_top = 312.059
 margin_right = 726.093
 margin_bottom = 376.06
+texto = "Esta mesa es algo vieja ya"
 
 [node name="Florero" parent="Interactuables" index="3" instance=ExtResource( 3 )]
 margin_left = 658.667
 margin_top = 239.812
 margin_right = 722.667
 margin_bottom = 303.813
+texto = "Es una margarita"
 
 [node name="Carpeta" parent="Interactuables" index="4" instance=ExtResource( 3 )]
 margin_left = 737.343
 margin_top = 308.751
 margin_right = 801.343
 margin_bottom = 372.752
+texto = "Ailen esta haciendo la tarea durante la cuarentena."
 
 [node name="CambiarNivel" parent="Interactuables" index="5" instance=ExtResource( 4 )]
 margin_left = 438.184
@@ -54,6 +58,7 @@ margin_top = 132.38
 margin_right = 522.895
 margin_bottom = 208.38
 necesitaA = "Llaves"
+pista = "Donde deje las llaves?"
 
 [node name="Llaves" parent="Interactuables" index="7" instance=ExtResource( 3 )]
 margin_left = 191.128

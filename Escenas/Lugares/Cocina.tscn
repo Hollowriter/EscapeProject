@@ -15,25 +15,28 @@ margin_left = 872.889
 margin_top = 336.895
 margin_right = 936.889
 margin_bottom = 400.896
-texto = "soy un item"
+texto = "Hay sopa en el horno"
 
 [node name="Baules" parent="Interactuables" index="1" instance=ExtResource( 3 )]
 margin_left = 702.632
 margin_top = 333.194
 margin_right = 766.632
 margin_bottom = 397.195
+texto = "Creo que ahora es el momento ideas para que esten lavados los cubiertos."
 
 [node name="Heladera" parent="Interactuables" index="2" instance=ExtResource( 3 )]
 margin_left = 64.1686
 margin_top = 281.376
 margin_right = 128.169
 margin_bottom = 345.377
+texto = "Seguro despues tengo que salir denuevo por comida"
 
 [node name="Pileta" parent="Interactuables" index="3" instance=ExtResource( 3 )]
 margin_left = 794.911
 margin_top = 281.194
 margin_right = 858.911
 margin_bottom = 345.195
+texto = "Cuando vuelvo, me lavo las manos."
 
 [node name="Bolsa" parent="Interactuables" index="4" instance=ExtResource( 3 )]
 margin_left = 66.8438

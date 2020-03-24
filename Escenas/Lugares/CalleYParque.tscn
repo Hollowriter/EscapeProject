@@ -8,11 +8,15 @@
 textoAlEntrar = "CalleYParque"
 
 [node name="Piedras" parent="Interactuables" index="0" instance=ExtResource( 2 )]
+margin_left = 867.529
+margin_top = 325.487
+margin_right = 931.529
+margin_bottom = 389.487
 agarrable = true
 
 [node name="BorrarNivel" parent="CambiarNiveles" index="3" instance=ExtResource( 3 )]
-margin_left = 477.777
-margin_top = 182.499
-margin_right = 541.777
-margin_bottom = 246.499
+margin_left = 587.257
+margin_top = 42.8718
+margin_right = 651.257
+margin_bottom = 106.872
 nivelBorra = 1
