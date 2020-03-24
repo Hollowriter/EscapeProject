@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Escenas/Lugares/LugarBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Visuales/Fondos/dormitorio.jpg" type="Texture" id=2]
 [ext_resource path="res://Escenas/Item.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Escenas/CambiarNivel.tscn" type="PackedScene" id=4]
 
 [node name="Lugar" instance=ExtResource( 1 )]
 textoAlEntrar = "Living"
@@ -80,3 +81,16 @@ margin_left = 455.912
 margin_top = -117.572
 margin_right = 519.912
 margin_bottom = -53.5713
+
+[node name="CambiarNivel" parent="CambiarNiveles" index="3" instance=ExtResource( 4 )]
+margin_left = 447.563
+margin_top = 119.713
+margin_right = 511.563
+margin_bottom = 183.713
+nivelCarga = 2
+
+[node name="Inventario" parent="." index="4"]
+margin_left = -508.113
+margin_top = -151.721
+margin_right = 515.887
+margin_bottom = -2.7207
