@@ -42,17 +42,17 @@ margin_right = 801.343
 margin_bottom = 372.752
 
 [node name="CambiarNivel" parent="Interactuables" index="5" instance=ExtResource( 4 )]
-margin_left = 447.563
-margin_top = 119.713
-margin_right = 511.563
-margin_bottom = 183.713
+margin_left = 438.184
+margin_top = 131.741
+margin_right = -521.816
+margin_bottom = -404.259
 nivelCarga = 2
 
 [node name="Puerta" parent="Interactuables" index="6" instance=ExtResource( 3 )]
-margin_left = 439.0
-margin_top = 118.0
-margin_right = 513.0
-margin_bottom = 190.0
+margin_left = 440.895
+margin_top = 132.38
+margin_right = 522.895
+margin_bottom = 208.38
 necesitaA = "Llaves"
 
 [node name="Llaves" parent="Interactuables" index="7" instance=ExtResource( 3 )]

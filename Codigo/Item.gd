@@ -29,8 +29,9 @@ func Seleccionado():
 	else:
 		if necesitaA != "":
 			if escenaPrincipal.itemSeleccionado == necesitaA:
-				emit_signal("seleccionado")
+				# emit_signal("seleccionado")
 				audio.play()
+				queue_free()
 			else:
 				emit_signal("darPista")
 				audioPista.play()
