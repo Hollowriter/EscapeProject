@@ -11,42 +11,42 @@ textoAlEntrar = "Cocina"
 texture = ExtResource( 2 )
 
 [node name="Horno" parent="Interactuables" index="0" instance=ExtResource( 3 )]
-margin_left = 38.2599
-margin_top = 24.1405
-margin_right = 102.26
-margin_bottom = 88.1415
+margin_left = 872.889
+margin_top = 336.895
+margin_right = 936.889
+margin_bottom = 400.896
 texto = "soy un item"
 
 [node name="Baules" parent="Interactuables" index="1" instance=ExtResource( 3 )]
-margin_left = 38.2599
-margin_top = 24.1405
-margin_right = 102.26
-margin_bottom = 88.1415
+margin_left = 702.632
+margin_top = 333.194
+margin_right = 766.632
+margin_bottom = 397.195
 
 [node name="Heladera" parent="Interactuables" index="2" instance=ExtResource( 3 )]
-margin_left = 38.2599
-margin_top = 24.1405
-margin_right = 102.26
-margin_bottom = 88.1415
+margin_left = 64.1686
+margin_top = 281.376
+margin_right = 128.169
+margin_bottom = 345.377
 
 [node name="Pileta" parent="Interactuables" index="3" instance=ExtResource( 3 )]
-margin_left = 38.2599
-margin_top = 24.1405
-margin_right = 102.26
-margin_bottom = 88.1415
+margin_left = 794.911
+margin_top = 281.194
+margin_right = 858.911
+margin_bottom = 345.195
 
 [node name="Bolsa" parent="Interactuables" index="4" instance=ExtResource( 3 )]
-margin_left = 38.2599
-margin_top = 24.1405
-margin_right = 102.26
-margin_bottom = 88.1415
+margin_left = 66.8438
+margin_top = 200.17
+margin_right = 130.844
+margin_bottom = 264.171
 agarrable = true
 
 [node name="Alcohol en gel" parent="Interactuables" index="5" instance=ExtResource( 3 )]
-margin_left = 38.2599
-margin_top = 24.1405
-margin_right = 102.26
-margin_bottom = 88.1415
+margin_left = 714.125
+margin_top = 269.494
+margin_right = 778.125
+margin_bottom = 333.495
 agarrable = true
 
 [node name="CambiarLugar" parent="CambiarNiveles" index="0"]
