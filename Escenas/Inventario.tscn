@@ -3,8 +3,8 @@
 [ext_resource path="res://Codigo/Inventario.gd" type="Script" id=1]
 [ext_resource path="res://Visuales/icon.png" type="Texture" id=2]
 [ext_resource path="res://Escenas/EspacioDeInventario.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Audio/UI/UI_inventario_cerrar.wav" type="AudioStream" id=4]
-[ext_resource path="res://Audio/UI/UI_inventario_abrir.wav" type="AudioStream" id=5]
+[ext_resource path="res://Audio/UI/UI_inventario_abrir.wav" type="AudioStream" id=4]
+[ext_resource path="res://Audio/UI/UI_inventario_cerrar.wav" type="AudioStream" id=5]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Elegido5"
@@ -97,6 +97,7 @@ __meta__ = {
 }
 
 [node name="Espacio0" parent="BotonInventario" instance=ExtResource( 3 )]
+self_modulate = Color( 0, 0, 0, 1 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -107,6 +108,7 @@ margin_right = -210.0
 margin_bottom = 125.0
 
 [node name="Espacio1" parent="BotonInventario" instance=ExtResource( 3 )]
+self_modulate = Color( 0, 0, 0, 1 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -117,6 +119,7 @@ margin_right = -110.0
 margin_bottom = 125.0
 
 [node name="Espacio2" parent="BotonInventario" instance=ExtResource( 3 )]
+self_modulate = Color( 0, 0, 0, 1 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -127,6 +130,7 @@ margin_right = -10.0
 margin_bottom = 125.0
 
 [node name="Espacio3" parent="BotonInventario" instance=ExtResource( 3 )]
+self_modulate = Color( 0, 0, 0, 1 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -137,6 +141,7 @@ margin_right = 90.0
 margin_bottom = 125.0
 
 [node name="Espacio4" parent="BotonInventario" instance=ExtResource( 3 )]
+self_modulate = Color( 0, 0, 0, 1 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -147,6 +152,7 @@ margin_right = 190.0
 margin_bottom = 125.0
 
 [node name="Espacio5" parent="BotonInventario" instance=ExtResource( 3 )]
+self_modulate = Color( 0, 0, 0, 1 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -162,10 +168,10 @@ anims/Elegido5 = SubResource( 1 )
 anims/Mostrar = SubResource( 3 )
 
 [node name="AbrirSonido" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 5 )
+stream = ExtResource( 4 )
 
 [node name="CerrarSonido" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
+stream = ExtResource( 5 )
 [connection signal="pressed" from="BotonInventario" to="." method="BotonInventarioApretado"]
 [connection signal="pressed" from="BotonInventario/Espacio0" to="." method="SeleccionarItem" binds= [ 0 ]]
 [connection signal="pressed" from="BotonInventario/Espacio1" to="." method="SeleccionarItem" binds= [ 1 ]]

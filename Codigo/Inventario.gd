@@ -40,7 +40,7 @@ func AgregarItem(lugar, imagen, escala=1):
 	item.texture = imagen
 	item.rect_scale = Vector2(escala,escala)
 
-func SeleccionarItem(numero):
+func SeleccionarItem(numero = 0):
 	if escenaPrin.contenido[numero].size() > 1:
 		cajaDeTexto.NuevoTexto(escenaPrin.contenido[numero][1])
 	for i in range(6):
@@ -54,3 +54,8 @@ func SeleccionarItem(numero):
 				escenaPrin.itemSeleccionado = null
 		else:
 			espacio.self_modulate = Color("#000000")
+
+func DesseleccionarItem():
+	for i in range(6):
+		var espacio = get_node("BotonInventario/Espacio" + str(i))
+		espacio.self_modulate = Color("#000000")

@@ -18,7 +18,7 @@ func ActualizarItemClickeado(nuevoItem):
 	cajaDeTexto.NuevoTexto(nuevoItem.texto)
 	if nuevoItem.necesitaA != "":
 		escenaPrincipal.SoltarItem(nuevoItem.necesitaA)
-
+		
 func DarPistaItemClickeado(nuevoItem):
 	if ultimoItemClickeado != null:
 		ultimoItemClickeado.Deseleccionar()

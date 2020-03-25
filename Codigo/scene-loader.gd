@@ -5,6 +5,7 @@ var contenido = [[],[],[],[],[],[]]
 var itemSeleccionado
 var scenes_loaded={}
 var last_scene
+var nivel = 1
 
 onready var inventario
 
@@ -27,7 +28,7 @@ func change_scene_to(scene_name):
 	add_child(scenes_loaded[scene_name])
 	if scenes_loaded[scene_name].has_method("on_enter_scene"): scenes_loaded[scene_name].on_enter_scene()
 	last_scene=scenes_loaded[scene_name]
-	
+
 	itemSeleccionado = null
 	inventario = last_scene.get_node("Inventario")
 	inventario.BotonInventarioApretado(false)
@@ -42,12 +43,35 @@ func AgarrarItemClickeado(item):
 			item.queue_free()
 			contenido[i] = [item.texture_normal, item.texto]
 			inventario.AgregarItem(i, item.texture_normal)
-			return
+			break
 
-func SoltarItem(nombre):
+func SoltarItem(item):
+	inventario.DesseleccionarItem()
 	for i in range(espacios.size()):
-		if espacios[i] == nombre:
+		if espacios[i] == item:
 			espacios[i] = ""
 			contenido[i] = []
 			inventario.AgregarItem(i, null)
-			print(i)
+
+func CondicionesDeCadaNivel(accion = "seleccionar"):
+	match (nivel):
+		1:
+			if accion == "salir casa":
+				var itemsQueNecesitas = ["Billetera", "Documento", "Bolsa", "Alcohol en gel"]
+				for itemNecesario in itemsQueNecesitas:
+					if not espacios.has(itemNecesario):
+						Perdiste()
+		2:
+			pass
+		3:
+			if accion == "salir farmacia":
+				var itemNecesario = "Recibo"
+				if not espacios.has(itemNecesario):
+					Perdiste()
+		4:
+			pass
+		5:
+			pass
+
+func Perdiste():
+	print("perdiste")

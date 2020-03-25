@@ -15,6 +15,8 @@ onready var audioPista = $SonidoPista
 onready var audioAgarrado = $SonidoAgarrado
 onready var escenaPrincipal = get_parent().get_parent().get_parent()
 
+var faltaNecesitaA = true
+
 func _ready():
 	if texto == "":
 		texto = name
@@ -27,9 +29,11 @@ func Seleccionado():
 		emit_signal("agarrado")
 		audioAgarrado.play()
 	else:
+		animationPlayer.play("seleccionado")
 		if necesitaA != "":
-			if escenaPrincipal.itemSeleccionado == necesitaA:
-				# emit_signal("seleccionado")
+			if escenaPrincipal.itemSeleccionado == necesitaA or faltaNecesitaA == false:
+				faltaNecesitaA = false
+				emit_signal("seleccionado")
 				audio.play()
 				queue_free()
 			else:
@@ -37,7 +41,6 @@ func Seleccionado():
 				audioPista.play()
 		else:
 			emit_signal("seleccionado")
-			animationPlayer.play("seleccionado")
 			audio.play()
 
 func Deseleccionar():
