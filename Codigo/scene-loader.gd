@@ -40,7 +40,7 @@ func AgarrarItemClickeado(item):
 		for i in range(espacios.size()):
 			if espacios[i] == "":
 				espacios[i] = item.name
-				item.hide()
+				item.hide() # Uso esto en lugar de eliminar el item, para que se pueda escuchar el audio. (Hollow)
 				contenido[i] = [item.texture_normal, item.texto]
 				inventario.AgregarItem(i, item.texture_normal)
 				return

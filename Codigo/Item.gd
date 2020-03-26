@@ -27,14 +27,15 @@ func Seleccionado():
 	if agarrable:
 		if agarrado == false:
 			emit_signal("agarrado")
-			agarrado = true
+			agarrado = true # Esto es para evitar mas interacciones con el objeto invisible. (Hollow)
 			audioAgarrado.play()
 	else:
 		if necesitaA != "":
 			if escenaPrincipal.itemSeleccionado == necesitaA:
-				emit_signal("resuelto")
+				# emit_signal("resuelto")
 				audio.play()
-				rect_position = Vector2(1000, 1000)
+				rect_position = Vector2(1000, 1000) 
+				# Hago esto en lugar de eliminarlo porque sino el audio no suena. (Hollow)
 			else:
 				emit_signal("darPista")
 				audioPista.play()

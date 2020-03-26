@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Escenas/Lugares/LugarBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenas/Item.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Audio/sfx/sfx_lavarmanos.wav" type="AudioStream" id=3]
 
 [node name="Lugar" instance=ExtResource( 1 )]
 textoAlEntrar = "Bano"
@@ -14,6 +15,9 @@ margin_bottom = 332.351
 agarrable = true
 texto = "Y... Listo, manos limpias."
 
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Pileta" index="1"]
+stream = ExtResource( 3 )
+
 [node name="Espejo" parent="Interactuables" index="1" instance=ExtResource( 2 )]
 margin_left = 766.394
 margin_top = 180.092
@@ -21,6 +25,8 @@ margin_right = 830.394
 margin_bottom = 244.093
 agarrable = true
 texto = "Que bonito soy"
+
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Espejo" index="1"]
 
 [node name="Inodoro" parent="Interactuables" index="2" instance=ExtResource( 2 )]
 margin_left = 645.185
@@ -30,6 +36,8 @@ margin_bottom = 385.9
 agarrable = true
 texto = "No comi nada todavia como para tener ganas"
 
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Inodoro" index="1"]
+
 [node name="Ducha" parent="Interactuables" index="3" instance=ExtResource( 2 )]
 margin_left = 904.249
 margin_top = 230.084
@@ -37,6 +45,8 @@ margin_right = 968.249
 margin_bottom = 294.084
 agarrable = true
 texto = "Me bañare mas a la noche."
+
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Ducha" index="1"]
 
 [node name="CambiarLugar2" parent="CambiarNiveles" index="1"]
 margin_left = 88.9569

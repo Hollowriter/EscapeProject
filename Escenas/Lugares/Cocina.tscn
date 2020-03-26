@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Escenas/Lugares/LugarBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Visuales/Fondos/cocina.jpg" type="Texture" id=2]
 [ext_resource path="res://Escenas/Item.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Audio/item/item_alcohol_squirtcorto.wav" type="AudioStream" id=4]
+[ext_resource path="res://Audio/item/item_bolsa_agarrar1.wav" type="AudioStream" id=5]
 
 [node name="Lugar" instance=ExtResource( 1 )]
 textoAlEntrar = "Cocina"
@@ -17,12 +19,16 @@ margin_right = 936.889
 margin_bottom = 400.896
 texto = "Hay sopa en el horno"
 
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Horno" index="1"]
+
 [node name="Baules" parent="Interactuables" index="1" instance=ExtResource( 3 )]
 margin_left = 702.632
 margin_top = 333.194
 margin_right = 766.632
 margin_bottom = 397.195
 texto = "Creo que ahora es el momento ideas para que esten lavados los cubiertos."
+
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Baules" index="1"]
 
 [node name="Heladera" parent="Interactuables" index="2" instance=ExtResource( 3 )]
 margin_left = 64.1686
@@ -31,12 +37,16 @@ margin_right = 128.169
 margin_bottom = 345.377
 texto = "Seguro despues tengo que salir denuevo por comida"
 
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Heladera" index="1"]
+
 [node name="Pileta" parent="Interactuables" index="3" instance=ExtResource( 3 )]
 margin_left = 794.911
 margin_top = 281.194
 margin_right = 858.911
 margin_bottom = 345.195
 texto = "Cuando vuelvo, me lavo las manos."
+
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Pileta" index="1"]
 
 [node name="Bolsa" parent="Interactuables" index="4" instance=ExtResource( 3 )]
 margin_left = 66.8438
@@ -45,12 +55,24 @@ margin_right = 130.844
 margin_bottom = 264.171
 agarrable = true
 
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Bolsa" index="1"]
+stream = ExtResource( 5 )
+
+[node name="SonidoAgarrado" type="AudioStreamPlayer" parent="Interactuables/Bolsa" index="2"]
+stream = ExtResource( 5 )
+
 [node name="Alcohol en gel" parent="Interactuables" index="5" instance=ExtResource( 3 )]
 margin_left = 714.125
 margin_top = 269.494
 margin_right = 778.125
 margin_bottom = 333.495
 agarrable = true
+
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Alcohol en gel" index="1"]
+stream = ExtResource( 4 )
+
+[node name="SonidoAgarrado" type="AudioStreamPlayer" parent="Interactuables/Alcohol en gel" index="2"]
+stream = ExtResource( 4 )
 
 [node name="CambiarLugar" parent="CambiarNiveles" index="0"]
 margin_left = 948.664
