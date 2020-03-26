@@ -9,10 +9,11 @@ export(String) var necesitaA = ""
 export(String) var texto = ""
 export(String) var pista = ""
 
+onready var agarrado = false
 onready var animationPlayer = $AnimationPlayer
-#onready var audio = $Sonido
-#onready var audioPista = $SonidoPista
-#onready var audioAgarrado = $SonidoAgarrado
+onready var audio = $Sonido
+onready var audioPista = $SonidoPista
+onready var audioAgarrado = $SonidoAgarrado
 onready var escenaPrincipal = get_parent().get_parent().get_parent()
 
 func _ready():
@@ -24,21 +25,26 @@ func _ready():
 
 func Seleccionado():
 	if agarrable:
-		emit_signal("agarrado")
-#		audioAgarrado.play()
+		if agarrado == false:
+			emit_signal("agarrado")
+			agarrado = true
+			audioAgarrado.play()
 	else:
 		if necesitaA != "":
 			if escenaPrincipal.itemSeleccionado == necesitaA:
-				# emit_signal("seleccionado")
-#				audio.play()
-				queue_free()
+				emit_signal("resuelto")
+				audio.play()
+				rect_position = Vector2(1000, 1000)
 			else:
 				emit_signal("darPista")
-#				audioPista.play()
+				audioPista.play()
 		else:
 			emit_signal("seleccionado")
 			animationPlayer.play("seleccionado")
-#			audio.play()
+			audio.play()
 
 func Deseleccionar():
 	animationPlayer.play("normal")
+
+func CheckAgarrado():
+	return agarrado
