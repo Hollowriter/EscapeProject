@@ -7,6 +7,7 @@ func _ready():
 	if nivelBorra == 1: borrar_nivel1()
 	if nivelBorra == 2: borrar_nivel2()
 	if nivelBorra == 3: borrar_nivel3()
+	if nivelBorra == 4: borrar_nivel4()
 	if nivelBorra == 5: borrar_nivel5()
 	queue_free()
 
@@ -15,10 +16,13 @@ func borrar_nivel1():
 	sceneLoader.drop_scene("Living")
 
 func borrar_nivel2():
-	sceneLoader.drop_scene("CalleYParque")
+	sceneLoader.drop_scene("Callejon")
 
 func borrar_nivel3():
 	sceneLoader.drop_scene("Farmacia")
+	
+func borrar_nivel4():
+	sceneLoader.drop_scene("CalleYParque")
 
 func borrar_nivel5():
 	sceneLoader.drop_scene("Cocina2")

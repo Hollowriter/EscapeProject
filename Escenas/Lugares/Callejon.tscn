@@ -6,7 +6,7 @@
 [ext_resource path="res://Escenas/CambiarNivel.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Escenas/BorrarNivel.tscn" type="PackedScene" id=5]
 
-[node name="Lugar" index="0" instance=ExtResource( 1 )]
+[node name="Lugar" instance=ExtResource( 1 )]
 textoAlEntrar = "CalleYParque"
 
 [node name="Tumulto" parent="Interactuables" index="0" instance=ExtResource( 2 )]

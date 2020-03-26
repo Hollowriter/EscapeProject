@@ -7,7 +7,7 @@ func Apretado():
 	if nivelCarga == 1: cargar_nivel1()
 	if nivelCarga == 2: cargar_nivel2()
 	if nivelCarga == 3: cargar_nivel3()
-	if nivelCarga == 4: cargar_nivel3()
+	if nivelCarga == 4: cargar_nivel4()
 	if nivelCarga == 5: cargar_nivel5()
 	
 	if nivelCarga >= 1:
