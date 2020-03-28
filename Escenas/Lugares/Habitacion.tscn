@@ -64,3 +64,9 @@ margin_top = 263.733
 margin_right = 839.362
 margin_bottom = 327.733
 aDondeIr = "Bano"
+
+[node name="Inventario" parent="." index="4"]
+margin_left = -495.258
+margin_top = -121.225
+margin_right = 528.742
+margin_bottom = -50.2248

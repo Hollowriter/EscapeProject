@@ -5,7 +5,7 @@
 [ext_resource path="res://Escenas/Item.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Escenas/BorrarNivel.tscn" type="PackedScene" id=4]
 
-[node name="Lugar" index="0" instance=ExtResource( 1 )]
+[node name="Lugar" instance=ExtResource( 1 )]
 textoAlEntrar = "Living"
 
 [node name="Fondo" parent="." index="0"]
@@ -80,3 +80,9 @@ margin_top = 122.434
 margin_right = 825.809
 margin_bottom = 186.434
 nivelBorra = 3
+
+[node name="Inventario" parent="." index="4"]
+margin_left = -490.234
+margin_top = -119.973
+margin_right = 533.766
+margin_bottom = -48.9734

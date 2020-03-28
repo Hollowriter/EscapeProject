@@ -44,3 +44,9 @@ margin_top = 278.083
 margin_right = 152.957
 margin_bottom = 342.083
 aDondeIr = "Habitacion"
+
+[node name="Inventario" parent="." index="4"]
+margin_left = -479.7
+margin_top = -106.236
+margin_right = 544.3
+margin_bottom = -35.236

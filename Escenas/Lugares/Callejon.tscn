@@ -59,3 +59,9 @@ margin_top = 42.8718
 margin_right = 651.257
 margin_bottom = 106.872
 nivelBorra = 1
+
+[node name="Inventario" parent="." index="4"]
+margin_left = -495.258
+margin_top = -111.175
+margin_right = 528.742
+margin_bottom = -7.17499

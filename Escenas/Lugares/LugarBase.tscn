@@ -32,7 +32,6 @@ __meta__ = {
 }
 
 [node name="CambiarNiveles" type="Control" parent="."]
-editor/display_folded = true
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -1024.0
@@ -60,9 +59,7 @@ margin_right = 740.68
 margin_bottom = -54.9317
 
 [node name="Inventario" parent="." instance=ExtResource( 6 )]
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-margin_left = -512.0
-margin_top = -71.0
-margin_right = 512.0
+margin_left = -494.382
+margin_top = -103.3
+margin_right = 529.618
+margin_bottom = -32.2996

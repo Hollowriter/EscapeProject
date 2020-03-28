@@ -44,3 +44,9 @@ margin_top = 317.335
 margin_right = -11.336
 margin_bottom = -218.665
 aDondeIr = "Living2"
+
+[node name="Inventario" parent="." index="4"]
+margin_left = -498.396
+margin_top = -106.37
+margin_right = 525.604
+margin_bottom = -35.3697

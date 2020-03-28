@@ -22,7 +22,7 @@ func _ready():
 		texto = name
 	
 func Seleccionado():
-	escenaPrincipal.AumentarRiesgo()
+	# escenaPrincipal.AumentarRiesgo() # comentado porque aun no funciona correctamente (Hollow)
 	if agarrable:
 		emit_signal("agarrado")
 		audioAgarrado.play()

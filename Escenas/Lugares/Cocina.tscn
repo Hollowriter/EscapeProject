@@ -5,7 +5,7 @@
 [ext_resource path="res://Escenas/Item.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Visuales/Alcohol.png" type="Texture" id=4]
 
-[node name="Lugar" index="0" instance=ExtResource( 1 )]
+[node name="Lugar" instance=ExtResource( 1 )]
 textoAlEntrar = "Cocina"
 
 [node name="Fondo" parent="." index="0"]
@@ -60,3 +60,9 @@ margin_top = 317.335
 margin_right = -11.336
 margin_bottom = -218.665
 aDondeIr = "Living"
+
+[node name="Inventario" parent="." index="4"]
+margin_left = -483.616
+margin_top = -111.471
+margin_right = 540.384
+margin_bottom = -40.4713

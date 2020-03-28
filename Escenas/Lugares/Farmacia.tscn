@@ -6,7 +6,7 @@
 [ext_resource path="res://Escenas/CambiarNivel.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Escenas/BorrarNivel.tscn" type="PackedScene" id=5]
 
-[node name="Lugar" index="0" instance=ExtResource( 1 )]
+[node name="Lugar" instance=ExtResource( 1 )]
 textoAlEntrar = "Farmacia"
 
 [node name="CajaRegistradora" parent="Interactuables" index="0" instance=ExtResource( 2 )]
@@ -86,3 +86,9 @@ margin_top = 17.2677
 margin_right = 918.754
 margin_bottom = 81.2677
 nivelBorra = 2
+
+[node name="Inventario" parent="." index="4"]
+margin_left = -494.732
+margin_top = -112.011
+margin_right = 529.268
+margin_bottom = -41.0109
