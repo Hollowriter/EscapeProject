@@ -22,6 +22,9 @@ func ActualizarItemClickeado(nuevoItem):
 	else:
 		if nuevoItem.necesitaA != "":
 			escenaPrincipal.SoltarItem(nuevoItem.necesitaA)
+	if nuevoItem.CheckRiesgo() == true:
+		if nuevoItem.CheckIntentos() > nuevoItem.CheckLimiteRiesgo():
+			escenaPrincipal.Perdiste()
 func DarPistaItemClickeado(nuevoItem):
 	if ultimoItemClickeado != null:
 		ultimoItemClickeado.Deseleccionar()

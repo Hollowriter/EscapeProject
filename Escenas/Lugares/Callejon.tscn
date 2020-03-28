@@ -17,7 +17,9 @@ margin_left = 385.0
 margin_top = 177.0
 margin_right = 599.0
 margin_bottom = 381.0
+riesgo = true
 texto = "No creo poder pasar entre ese tumulto de gente."
+limiteRiesgo = 1
 
 [node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Tumulto" index="1"]
 
