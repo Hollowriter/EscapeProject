@@ -9,7 +9,7 @@
 [ext_resource path="res://Audio/item/item_cajaremedio_agarrar.wav" type="AudioStream" id=7]
 
 [node name="Lugar" instance=ExtResource( 1 )]
-textoAlEntrar = "Farmacia"
+textoAlEntrar = "Perfecto, ya estoy en la farmacia. Debo buscar el medicamento de mi madre y el inhalador para mi hermana."
 
 [node name="CajaRegistradora" parent="Interactuables" index="0" instance=ExtResource( 2 )]
 margin_left = 46.1255

@@ -10,7 +10,7 @@
 [ext_resource path="res://Audio/item/item_piedras_dejar2.wav" type="AudioStream" id=8]
 
 [node name="Lugar" instance=ExtResource( 1 )]
-textoAlEntrar = "CalleYParque"
+textoAlEntrar = "Hay un monton de gente bloqueando el camino, tengo que buscar pasar por otro lado para no contagiarme."
 
 [node name="Tumulto" parent="Interactuables" index="0" instance=ExtResource( 2 )]
 margin_left = 385.0

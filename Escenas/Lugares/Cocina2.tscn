@@ -5,7 +5,8 @@
 [ext_resource path="res://Escenas/Item.tscn" type="PackedScene" id=3]
 
 [node name="Lugar" instance=ExtResource( 1 )]
-textoAlEntrar = "Cocina"
+textoAlEntrar = "Mmm... Huele a que la comida esta lista."
+textoSegundaVez = "No creo tener nada mas que hacer por aca."
 
 [node name="Fondo" parent="." index="0"]
 texture = ExtResource( 2 )

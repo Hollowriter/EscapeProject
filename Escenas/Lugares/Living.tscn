@@ -12,7 +12,8 @@
 [ext_resource path="res://Audio/item/item_documento_agarrar.wav" type="AudioStream" id=10]
 
 [node name="Lugar" instance=ExtResource( 1 )]
-textoAlEntrar = "Living"
+textoAlEntrar = "Debo salir a la farmacia. Debo llevar todo lo necesario para que no me paren y no contagiarme."
+textoSegundaVez = "Volvemos al living"
 
 [node name="Fondo" parent="." index="0"]
 texture = ExtResource( 2 )
