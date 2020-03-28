@@ -98,7 +98,7 @@ margin_left = 761.809
 margin_top = 122.434
 margin_right = 825.809
 margin_bottom = 186.434
-nivelBorra = 3
+nivelBorra = 4
 
 [node name="Inventario" parent="." index="4"]
 margin_left = -490.234

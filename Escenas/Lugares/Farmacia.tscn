@@ -76,7 +76,7 @@ margin_left = 52.5965
 margin_top = 257.138
 margin_right = -907.404
 margin_bottom = -278.862
-nivelCarga = 5
+nivelCarga = 4
 
 [node name="MedicinaNervios" parent="Interactuables" index="7" instance=ExtResource( 3 )]
 margin_left = 596.979

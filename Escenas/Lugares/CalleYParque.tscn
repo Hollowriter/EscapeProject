@@ -1,8 +1,46 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Escenas/Lugares/LugarBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Escenas/Item.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Escenas/BorrarNivel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Escenas/CambiarNivel.tscn" type="PackedScene" id=4]
 
 [node name="Lugar" instance=ExtResource( 1 )]
+textoAlEntrar = "Policia: ¡Alto! Me informan que un ladron acaba de robar articulos de una farmacia. Como los que vos llevas."
+
+[node name="CambiarNivel" parent="Interactuables" index="0" instance=ExtResource( 4 )]
+margin_left = 465.893
+margin_top = 188.115
+margin_right = -494.107
+margin_bottom = -347.885
+nivelCarga = 5
+
+[node name="Policia" parent="Interactuables" index="1" instance=ExtResource( 2 )]
+margin_left = 452.0
+margin_top = 176.0
+margin_right = 534.0
+margin_bottom = 257.0
+riesgo = true
+necesitaA = "Recibo"
+pista = "Policia: Proba que no robaste esos articulos. ¡No juegues con mi paciencia!"
+limiteRiesgo = 2
+
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Policia" index="1"]
+
+[node name="SonidoPista" type="AudioStreamPlayer" parent="Interactuables/Policia" index="2"]
+
+[node name="CambiarLugar2" parent="CambiarNiveles" index="1"]
+margin_left = 464.304
+margin_top = -111.9
+margin_right = 528.304
+margin_bottom = -47.8994
+
+[node name="BorrarNivel" parent="CambiarNiveles" index="3" instance=ExtResource( 3 )]
+margin_left = 736.639
+margin_top = 86.1463
+margin_right = 800.639
+margin_bottom = 150.146
+nivelBorra = 3
 
 [node name="Inventario" parent="." index="4"]
 margin_left = -498.052
