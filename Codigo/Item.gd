@@ -9,6 +9,7 @@ export(String) var necesitaA = ""
 export(String) var texto = ""
 export(String) var pista = ""
 
+onready var agarrado = false
 onready var animationPlayer = $AnimationPlayer
 onready var audio = $Sonido
 onready var audioPista = $SonidoPista
@@ -25,6 +26,7 @@ func Seleccionado():
 	# escenaPrincipal.AumentarRiesgo() # comentado porque aun no funciona correctamente (Hollow)
 	if agarrable:
 		emit_signal("agarrado")
+		agarrado = true
 		audioAgarrado.play()
 	else:
 		animationPlayer.play("seleccionado")
@@ -33,7 +35,7 @@ func Seleccionado():
 				faltaNecesitaA = false
 				emit_signal("seleccionado")
 				audio.play()
-				queue_free()
+				rect_position = Vector2(1000, 1000)
 			else:
 				emit_signal("darPista")
 				audioPista.play()
@@ -43,3 +45,6 @@ func Seleccionado():
 
 func Deseleccionar():
 	animationPlayer.play("normal")
+
+func CheckAgarrado():
+	return agarrado

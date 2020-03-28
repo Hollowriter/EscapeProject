@@ -45,13 +45,14 @@ func change_scene_to(scene_name):
 			inventario.AgregarItem(i, contenido[i][0])
 
 func AgarrarItemClickeado(item):
-	for i in range(espacios.size()):
-		if espacios[i] == "":
-			espacios[i] = item.name
-			item.queue_free()
-			contenido[i] = [item.texture_normal, item.texto]
-			inventario.AgregarItem(i, item.texture_normal)
-			break
+	if item.CheckAgarrado() == false:
+		for i in range(espacios.size()):
+			if espacios[i] == "":
+				espacios[i] = item.name
+				item.hide()
+				contenido[i] = [item.texture_normal, item.texto]
+				inventario.AgregarItem(i, item.texture_normal)
+				break
 
 func SoltarItem(item):
 	inventario.DesseleccionarItem()

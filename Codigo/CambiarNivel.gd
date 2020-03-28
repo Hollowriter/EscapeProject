@@ -22,7 +22,7 @@ func cargar_nivel1():
 func cargar_nivel2():
 	sceneLoader.CondicionesDeCadaNivel("salir casa")
 	# sceneLoader.get_node("Canvas/MedidorRiesgo").visible = true
-	
+	# comentado porque no funciona correctamente (Hollow)
 	sceneLoader.load_scene("Callejon")
 	yield( sceneLoader.get_tree().create_timer(0.5), "timeout")
 	sceneLoader.change_scene_to("Callejon")
