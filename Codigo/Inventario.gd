@@ -48,6 +48,7 @@ func SeleccionarItem(numero = 0):
 		if i == numero:
 			if escenaPrin.espacios[numero] != "":
 				espacio.self_modulate = Color("#555555")
+				escenaPrin.CondicionesDeCadaNivel("seleccionado en inventario", escenaPrin.itemSeleccionado, escenaPrin.espacios[numero])
 				escenaPrin.itemSeleccionado = escenaPrin.espacios[numero]
 			else:
 				espacio.self_modulate = Color("#000000")

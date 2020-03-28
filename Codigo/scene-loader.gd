@@ -1,13 +1,20 @@
 extends Node
 
+export(Texture) var spriteBolsaConPiedras
+export(String) var textoBolsaConPiedras
+
 var espacios = ["","","","","",""]
 var contenido = [[],[],[],[],[],[]]
 var itemSeleccionado
 var scenes_loaded={}
 var last_scene
 var nivel = 1
+var riesgoDeInfeccion = 0
+var limiteInfeccion = 10
 
 onready var inventario
+onready var cajaDeTexto
+onready var medidorRiesgo = $MedidorRiesgo
 
 func _ready():
 	load_scene("Cocina")
@@ -30,6 +37,7 @@ func change_scene_to(scene_name):
 	last_scene=scenes_loaded[scene_name]
 
 	itemSeleccionado = null
+	cajaDeTexto = last_scene.get_node("CajaDeTexto")
 	inventario = last_scene.get_node("Inventario")
 	inventario.BotonInventarioApretado(false)
 	for i in range(espacios.size()):
@@ -53,7 +61,7 @@ func SoltarItem(item):
 			contenido[i] = []
 			inventario.AgregarItem(i, null)
 
-func CondicionesDeCadaNivel(accion = "seleccionar"):
+func CondicionesDeCadaNivel(accion = "seleccionar", item1 = "", item2 = ""):
 	match (nivel):
 		1:
 			if accion == "salir casa":
@@ -62,7 +70,18 @@ func CondicionesDeCadaNivel(accion = "seleccionar"):
 					if not espacios.has(itemNecesario):
 						Perdiste()
 		2:
-			pass
+			if accion == "seleccionado en inventario":
+				if ["Piedras", "Bolsa"] == [item1, item2]:
+					for numEspacio in range(6):
+						if espacios[numEspacio] != "Piedras":
+							pass
+						SoltarItem("Piedras")
+						for _numEspacio in range(6):
+							if espacios[_numEspacio] == "Bolsa":
+								espacios[_numEspacio] = "BolsaConPiedras"
+								contenido[_numEspacio] = [spriteBolsaConPiedras, textoBolsaConPiedras]
+								cajaDeTexto.NuevoTexto("Bolsa con piedritas conseguida.")
+						
 		3:
 			if accion == "salir farmacia":
 				var itemNecesario = "Recibo"
@@ -73,5 +92,16 @@ func CondicionesDeCadaNivel(accion = "seleccionar"):
 		5:
 			pass
 
+func AumentarRiesgo():
+	if nivel == 1 or nivel == 5:
+		return
+	
+	riesgoDeInfeccion += 1
+	
+	medidorRiesgo.text = "Riesgo de infeccion: " + str(riesgoDeInfeccion)
+	
+	if riesgoDeInfeccion >= limiteInfeccion:
+		Perdiste()
+	
 func Perdiste():
-	print("perdiste")
+	get_tree().change_scene("res://Escenas/PantallaGameOver.tscn")

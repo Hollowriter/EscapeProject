@@ -21,10 +21,8 @@ func _ready():
 	if texto == "":
 		texto = name
 	
-	if necesitaA != "" && pista == "":
-		pista = "usar " + necesitaA + " en este objeto"
-
 func Seleccionado():
+	escenaPrincipal.AumentarRiesgo()
 	if agarrable:
 		emit_signal("agarrado")
 		audioAgarrado.play()

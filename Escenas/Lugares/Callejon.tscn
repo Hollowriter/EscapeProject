@@ -50,7 +50,7 @@ margin_left = 72.0
 margin_top = 224.0
 margin_right = 156.0
 margin_bottom = 304.0
-necesitaA = "Piedras"
+necesitaA = "BolsaConPiedras"
 pista = "Esta cerrada, pero el candado esta oxidado."
 
 [node name="BorrarNivel" parent="CambiarNiveles" index="3" instance=ExtResource( 5 )]

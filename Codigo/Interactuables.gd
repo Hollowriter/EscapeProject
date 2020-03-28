@@ -16,9 +16,12 @@ func ActualizarItemClickeado(nuevoItem):
 		ultimoItemClickeado.Deseleccionar()
 	ultimoItemClickeado = nuevoItem
 	cajaDeTexto.NuevoTexto(nuevoItem.texto)
-	if nuevoItem.necesitaA != "":
-		escenaPrincipal.SoltarItem(nuevoItem.necesitaA)
-		
+	if nuevoItem.name == "CajaRegistradora":
+		if nuevoItem.necesitaA.has(escenaPrincipal.itemSeleccionado):
+			escenaPrincipal.SoltarItem(escenaPrincipal.itemSeleccionado)
+	else:
+		if nuevoItem.necesitaA != "":
+			escenaPrincipal.SoltarItem(nuevoItem.necesitaA)
 func DarPistaItemClickeado(nuevoItem):
 	if ultimoItemClickeado != null:
 		ultimoItemClickeado.Deseleccionar()
