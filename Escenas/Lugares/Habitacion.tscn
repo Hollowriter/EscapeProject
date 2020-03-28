@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Escenas/Lugares/LugarBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenas/Item.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Audio/sfx/sfx_cambiarse.wav" type="AudioStream" id=3]
 
 [node name="Lugar" instance=ExtResource( 1 )]
 textoAlEntrar = "Habitacion"
@@ -13,6 +14,8 @@ margin_right = 563.142
 margin_bottom = 362.315
 texto = "Aca deje mi remera para estar adentro. Sera mejor que me la cambie."
 
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Cama" index="1"]
+
 [node name="Computadora" parent="Interactuables" index="1" instance=ExtResource( 2 )]
 margin_left = 204.933
 margin_top = 225.032
@@ -20,12 +23,16 @@ margin_right = 268.933
 margin_bottom = 289.032
 texto = "Espero que haya vuelto internet."
 
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Computadora" index="1"]
+
 [node name="Silla" parent="Interactuables" index="2" instance=ExtResource( 2 )]
 margin_left = 202.341
 margin_top = 311.979
 margin_right = 266.341
 margin_bottom = 375.979
 texto = "Tengo que cambiar esta silla."
+
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Silla" index="1"]
 
 [node name="Placard" parent="Interactuables" index="3" instance=ExtResource( 2 )]
 margin_left = 923.298
@@ -35,6 +42,8 @@ margin_bottom = 334.029
 rect_pivot_offset = Vector2( 1364.99, 3.6403 )
 texto = "Tengo ropa para estar adentro y para estar afuera"
 
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Placard" index="1"]
+
 [node name="Ventana" parent="Interactuables" index="4" instance=ExtResource( 2 )]
 margin_left = 663.851
 margin_top = 160.227
@@ -43,6 +52,8 @@ margin_bottom = 224.227
 rect_pivot_offset = Vector2( 1364.99, 3.6403 )
 texto = "No hay casi nadie en la calle."
 
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Ventana" index="1"]
+
 [node name="Ropa" parent="Interactuables" index="5" instance=ExtResource( 2 )]
 margin_left = 501.301
 margin_top = 217.078
@@ -50,6 +61,12 @@ margin_right = 565.301
 margin_bottom = 281.078
 rect_pivot_offset = Vector2( 1364.99, 3.6403 )
 agarrable = true
+
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Ropa" index="1"]
+stream = ExtResource( 3 )
+
+[node name="SonidoAgarrado" type="AudioStreamPlayer" parent="Interactuables/Ropa" index="2"]
+stream = ExtResource( 3 )
 
 [node name="CambiarLugar" parent="CambiarNiveles" index="0"]
 margin_left = 41.0617

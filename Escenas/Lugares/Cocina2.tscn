@@ -15,7 +15,9 @@ margin_left = 868.088
 margin_top = 342.468
 margin_right = 932.088
 margin_bottom = 406.469
-texto = "La comida parece estar lista ya"
+script = null
+
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Horno" index="1"]
 
 [node name="Baules" parent="Interactuables" index="1" instance=ExtResource( 3 )]
 margin_left = 691.239
@@ -24,6 +26,8 @@ margin_right = 755.24
 margin_bottom = 398.307
 texto = "Mejor no los toco hasta que me lave las manos"
 
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Baules" index="1"]
+
 [node name="Heladera" parent="Interactuables" index="2" instance=ExtResource( 3 )]
 margin_left = 60.0259
 margin_top = 258.125
@@ -31,12 +35,16 @@ margin_right = 124.026
 margin_bottom = 322.126
 texto = "Si, parece que debo salir por comida mañana."
 
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Heladera" index="1"]
+
 [node name="Pileta" parent="Interactuables" index="3" instance=ExtResource( 3 )]
 margin_left = 775.583
 margin_top = 293.495
 margin_right = 839.583
 margin_bottom = 357.496
 texto = "Mejor me lavo en el baño."
+
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Pileta" index="1"]
 
 [node name="CambiarLugar" parent="CambiarNiveles" index="0"]
 margin_left = 948.664

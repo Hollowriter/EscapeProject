@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Escenas/Lugares/LugarBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenas/Item.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Visuales/Piedras.png" type="Texture" id=3]
 [ext_resource path="res://Escenas/CambiarNivel.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Escenas/BorrarNivel.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Audio/item/item_llaves_cerrar1.wav" type="AudioStream" id=6]
+[ext_resource path="res://Audio/item/item_piedras_agarrar.wav" type="AudioStream" id=7]
+[ext_resource path="res://Audio/item/item_piedras_dejar2.wav" type="AudioStream" id=8]
 
 [node name="Lugar" instance=ExtResource( 1 )]
 textoAlEntrar = "CalleYParque"
@@ -16,6 +19,8 @@ margin_right = 599.0
 margin_bottom = 381.0
 texto = "No creo poder pasar entre ese tumulto de gente."
 
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Tumulto" index="1"]
+
 [node name="Piedras" parent="Interactuables" index="1" instance=ExtResource( 2 )]
 margin_left = 831.353
 margin_top = 301.37
@@ -24,6 +29,12 @@ margin_bottom = 365.37
 texture_normal = ExtResource( 3 )
 agarrable = true
 
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Piedras" index="1"]
+stream = ExtResource( 7 )
+
+[node name="SonidoAgarrado" type="AudioStreamPlayer" parent="Interactuables/Piedras" index="2"]
+stream = ExtResource( 7 )
+
 [node name="Señor" parent="Interactuables" index="2" instance=ExtResource( 2 )]
 margin_left = 699.745
 margin_top = 208.197
@@ -31,12 +42,16 @@ margin_right = 763.745
 margin_bottom = 272.197
 texto = "Señor: Esta gente deberia ser mas educada y hacer la fila. Joven, creo que sera mejor buscar otro lugar para pasar."
 
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Señor" index="1"]
+
 [node name="Niña" parent="Interactuables" index="3" instance=ExtResource( 2 )]
 margin_left = 236.991
 margin_top = 297.13
 margin_right = 300.991
 margin_bottom = 361.13
 texto = "Niña:Mmm... Espero que mi hermana no se entere que rompi su ganchito con ese candado... Ahora tengo ganas de romperlo!"
+
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Niña" index="1"]
 
 [node name="CambiarNivel" parent="Interactuables" index="4" instance=ExtResource( 4 )]
 margin_left = 84.0668
@@ -52,6 +67,12 @@ margin_right = 156.0
 margin_bottom = 304.0
 necesitaA = "BolsaConPiedras"
 pista = "Esta cerrada, pero el candado esta oxidado."
+
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/PuertaMetal" index="1"]
+stream = ExtResource( 6 )
+
+[node name="SonidoPista" type="AudioStreamPlayer" parent="Interactuables/PuertaMetal" index="2"]
+stream = ExtResource( 8 )
 
 [node name="BorrarNivel" parent="CambiarNiveles" index="3" instance=ExtResource( 5 )]
 margin_left = 587.257

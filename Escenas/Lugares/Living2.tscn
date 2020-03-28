@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Escenas/Lugares/LugarBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Visuales/Fondos/dormitorio.jpg" type="Texture" id=2]
 [ext_resource path="res://Escenas/Item.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Escenas/BorrarNivel.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Audio/sfx/sfx_puerta_cerrar.wav" type="AudioStream" id=5]
 
 [node name="Lugar" instance=ExtResource( 1 )]
 textoAlEntrar = "Living"
@@ -17,11 +18,15 @@ margin_top = 16.2024
 margin_right = 96.6922
 margin_bottom = 80.2034
 
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Mama" index="1"]
+
 [node name="Hermana" parent="Interactuables" index="1" instance=ExtResource( 3 )]
 margin_left = 124.967
 margin_top = 14.1518
 margin_right = 188.967
 margin_bottom = 78.1528
+
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Hermana" index="1"]
 
 [node name="Television" parent="Interactuables" index="2" instance=ExtResource( 3 )]
 margin_left = 358.729
@@ -29,11 +34,15 @@ margin_top = 288.925
 margin_right = 422.729
 margin_bottom = 352.926
 
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Television" index="1"]
+
 [node name="Sillon" parent="Interactuables" index="3" instance=ExtResource( 3 )]
 margin_left = 703.68
 margin_top = 315.128
 margin_right = 767.68
 margin_bottom = 379.129
+
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Sillon" index="1"]
 
 [node name="Mesa" parent="Interactuables" index="4" instance=ExtResource( 3 )]
 margin_left = 499.343
@@ -41,11 +50,15 @@ margin_top = 326.56
 margin_right = 563.343
 margin_bottom = 390.561
 
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Mesa" index="1"]
+
 [node name="Florero" parent="Interactuables" index="5" instance=ExtResource( 3 )]
 margin_left = 502.122
 margin_top = 235.444
 margin_right = 566.122
 margin_bottom = 299.445
+
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Florero" index="1"]
 
 [node name="Carpeta" parent="Interactuables" index="6" instance=ExtResource( 3 )]
 margin_left = 607.259
@@ -53,12 +66,17 @@ margin_top = 324.479
 margin_right = 671.259
 margin_bottom = 388.48
 
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Carpeta" index="1"]
+
 [node name="Puerta" parent="Interactuables" index="7" instance=ExtResource( 3 )]
 margin_left = 273.86
 margin_top = 171.467
 margin_right = 337.86
 margin_bottom = 235.468
-necesitaA = "Llaves"
+texto = "No creo que necesite salir mas por hoy"
+
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Puerta" index="1"]
+stream = ExtResource( 5 )
 
 [node name="CambiarLugar" parent="CambiarNiveles" index="0"]
 margin_left = 11.3889
