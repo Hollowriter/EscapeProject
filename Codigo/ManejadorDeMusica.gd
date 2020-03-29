@@ -18,7 +18,7 @@ func audio_reproducir():
 	if nivel == 3:
 		musica_nivel3()
 	if nivel == 4:
-		musica_nivel2()
+		musica_nivel4()
 	if nivel == 5:
 		musica_nivel1()
 	musica.play()
@@ -37,3 +37,6 @@ func musica_nivel2():
 
 func musica_nivel3():
 	musica = $MusicaFarmacia
+
+func musica_nivel4():
+	musica = $MusicaCalleYParque
