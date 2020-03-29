@@ -6,6 +6,7 @@ signal darPista
 
 export(bool) var agarrable = false
 export(bool) var riesgo = false
+export(bool) var contagiable = false
 export(String) var necesitaA = ""
 export(String) var texto = ""
 export(String) var pista = ""
@@ -68,3 +69,6 @@ func CheckIntentos():
 
 func CheckLimiteRiesgo():
 	return limiteRiesgo
+
+func CheckContagiable():
+	return contagiable

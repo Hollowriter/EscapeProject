@@ -15,6 +15,8 @@ var limiteInfeccion = 10
 onready var inventario
 onready var cajaDeTexto
 onready var medidorRiesgo = $MedidorRiesgo
+onready var manosLimpias = false
+onready var cambiado = false
 
 func _ready():
 	load_scene("Cocina")
@@ -46,6 +48,8 @@ func change_scene_to(scene_name):
 
 func AgarrarItemClickeado(item):
 	if item.CheckAgarrado() == false:
+		if item.name == "Ropa":
+			SetCambiado(true)
 		for i in range(espacios.size()):
 			if espacios[i] == "":
 				espacios[i] = item.name
@@ -103,6 +107,21 @@ func AumentarRiesgo():
 	
 	if riesgoDeInfeccion >= limiteInfeccion:
 		Perdiste()
-	
+
+func Ganaste():
+	get_tree().change_scene("res://Escenas/PantallaGanaste.tscn")
+
 func Perdiste():
 	get_tree().change_scene("res://Escenas/PantallaGameOver.tscn")
+
+func SetManosLimpias(limpias):
+	manosLimpias = limpias
+
+func SetCambiado(cambio):
+	cambiado = cambio
+
+func CheckManosLimpias():
+	return manosLimpias
+
+func CheckCambiado():
+	return cambiado

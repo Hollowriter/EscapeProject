@@ -61,9 +61,9 @@ texto = "Esta mesa es algo vieja ya"
 [node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Mesa" index="1"]
 
 [node name="Florero" parent="Interactuables" index="5" instance=ExtResource( 3 )]
-margin_left = 658.667
+margin_left = 660.615
 margin_top = 239.812
-margin_right = 722.667
+margin_right = 724.615
 margin_bottom = 303.813
 texto = "Es una margarita"
 
@@ -86,10 +86,10 @@ margin_bottom = -404.0
 nivelCarga = 2
 
 [node name="Puerta" parent="Interactuables" index="8" instance=ExtResource( 3 )]
-margin_left = 438.172
-margin_top = 132.38
-margin_right = 520.172
-margin_bottom = 208.38
+margin_left = 447.26
+margin_top = 130.108
+margin_right = 529.26
+margin_bottom = 206.108
 necesitaA = "Llaves"
 pista = "Donde deje las llaves?"
 

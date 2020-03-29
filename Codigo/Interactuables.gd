@@ -22,8 +22,15 @@ func ActualizarItemClickeado(nuevoItem):
 	else:
 		if nuevoItem.necesitaA != "":
 			escenaPrincipal.SoltarItem(nuevoItem.necesitaA)
+	if nuevoItem.name == "Pileta":
+		escenaPrincipal.SetManosLimpias(true)
 	if nuevoItem.CheckRiesgo() == true:
 		if nuevoItem.CheckIntentos() > nuevoItem.CheckLimiteRiesgo():
+			escenaPrincipal.Perdiste()
+	if nuevoItem.CheckContagiable() == true:
+		if escenaPrincipal.CheckManosLimpias() == true && escenaPrincipal.CheckCambiado() == true:
+			escenaPrincipal.Ganaste()
+		else:
 			escenaPrincipal.Perdiste()
 func DarPistaItemClickeado(nuevoItem):
 	if ultimoItemClickeado != null:
