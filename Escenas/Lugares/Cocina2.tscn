@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Escenas/Lugares/LugarBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Visuales/Fondos/bg-cocina.png" type="Texture" id=2]
 [ext_resource path="res://Escenas/Item.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Visuales/FlechaDerecha.png" type="Texture" id=4]
 
 [node name="Lugar" instance=ExtResource( 1 )]
 textoAlEntrar = "Mmm... Huele a que la comida esta lista."
@@ -12,37 +13,21 @@ textoSegundaVez = "No creo tener nada mas que hacer por aca."
 texture = ExtResource( 2 )
 
 [node name="Horno" parent="Interactuables" index="0" instance=ExtResource( 3 )]
-margin_left = 868.088
-margin_top = 342.468
-margin_right = 932.088
-margin_bottom = 406.469
+margin_left = 401.0
+margin_top = 272.0
+margin_right = 562.0
+margin_bottom = 380.0
+texture_normal = null
 script = null
 
 [node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Horno" index="1"]
 
-[node name="Baules" parent="Interactuables" index="1" instance=ExtResource( 3 )]
-margin_left = 691.239
-margin_top = 334.306
-margin_right = 755.24
-margin_bottom = 398.307
-texto = "Mejor no los toco hasta que me lave las manos"
-
-[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Baules" index="1"]
-
-[node name="Heladera" parent="Interactuables" index="2" instance=ExtResource( 3 )]
-margin_left = 60.0259
-margin_top = 258.125
-margin_right = 124.026
-margin_bottom = 322.126
-texto = "Si, parece que debo salir por comida mañana."
-
-[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Heladera" index="1"]
-
-[node name="Pileta" parent="Interactuables" index="3" instance=ExtResource( 3 )]
-margin_left = 775.583
-margin_top = 293.495
-margin_right = 839.583
-margin_bottom = 357.496
+[node name="Pileta" parent="Interactuables" index="1" instance=ExtResource( 3 )]
+margin_left = 696.0
+margin_top = 272.0
+margin_right = 858.0
+margin_bottom = 359.0
+texture_normal = null
 texto = "Mejor me lavo en el baño."
 
 [node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Pileta" index="1"]
@@ -52,6 +37,7 @@ margin_left = 948.664
 margin_top = 317.335
 margin_right = -11.336
 margin_bottom = -218.665
+texture_normal = ExtResource( 4 )
 aDondeIr = "Living2"
 
 [node name="Inventario" parent="." index="4"]

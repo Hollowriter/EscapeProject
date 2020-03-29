@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Escenas/Lugares/LugarBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Visuales/Fondos/bg-living.jpg" type="Texture" id=2]
@@ -10,6 +10,13 @@
 [ext_resource path="res://Audio/sfx/sfx_puerta_abrir.wav" type="AudioStream" id=8]
 [ext_resource path="res://Audio/item/item_llaves_agarrar1.wav" type="AudioStream" id=9]
 [ext_resource path="res://Audio/item/item_documento_agarrar.wav" type="AudioStream" id=10]
+[ext_resource path="res://Visuales/FlechaDerecha.png" type="Texture" id=11]
+[ext_resource path="res://Visuales/hermana.png" type="Texture" id=12]
+[ext_resource path="res://Visuales/FlechaIzquierda.png" type="Texture" id=13]
+[ext_resource path="res://Visuales/LlaveroConDosLlaves.png" type="Texture" id=14]
+[ext_resource path="res://Visuales/Billetera.png" type="Texture" id=15]
+[ext_resource path="res://Visuales/CuadroCandado.png" type="Texture" id=16]
+[ext_resource path="res://Visuales/madre.png" type="Texture" id=17]
 
 [node name="Lugar" instance=ExtResource( 1 )]
 textoAlEntrar = "Debo salir a la farmacia. Debo llevar todo lo necesario para que no me paren y no contagiarme."
@@ -18,78 +25,67 @@ textoSegundaVez = "Volvemos al living"
 [node name="Fondo" parent="." index="0"]
 texture = ExtResource( 2 )
 
-[node name="Mama" parent="Interactuables" index="0" instance=ExtResource( 3 )]
-margin_left = 23.6645
-margin_top = 17.0096
-margin_right = 87.6645
-margin_bottom = 81.0106
-
-[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Mama" index="1"]
-
-[node name="Hermana" parent="Interactuables" index="1" instance=ExtResource( 3 )]
-margin_left = 119.331
-margin_top = 17.0096
-margin_right = 183.331
-margin_bottom = 81.0106
-
-[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Hermana" index="1"]
-
-[node name="Television" parent="Interactuables" index="2" instance=ExtResource( 3 )]
-margin_left = 514.302
-margin_top = 277.315
-margin_right = 578.302
-margin_bottom = 341.316
+[node name="Television" parent="Interactuables" index="0" instance=ExtResource( 3 )]
+margin_left = 803.0
+margin_top = 250.0
+margin_right = 946.0
+margin_bottom = 359.0
+texture_normal = null
 
 [node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Television" index="1"]
 
-[node name="Sillon" parent="Interactuables" index="3" instance=ExtResource( 3 )]
-margin_left = 827.844
-margin_top = 305.883
-margin_right = 891.844
-margin_bottom = 369.884
+[node name="Sillon" parent="Interactuables" index="1" instance=ExtResource( 3 )]
+margin_left = 313.0
+margin_top = 296.0
+margin_right = 707.0
+margin_bottom = 395.0
+texture_normal = null
 texto = "Creo que es la primera vez que estoy contento por no tener que estar sentado"
 
 [node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Sillon" index="1"]
 
-[node name="Mesa" parent="Interactuables" index="4" instance=ExtResource( 3 )]
-margin_left = 662.093
-margin_top = 312.059
-margin_right = 726.093
-margin_bottom = 376.06
-texto = "Esta mesa es algo vieja ya"
+[node name="Hermana" parent="Interactuables" index="2" instance=ExtResource( 3 )]
+margin_left = 693.344
+margin_top = 273.279
+margin_right = 833.344
+margin_bottom = 413.279
+texture_normal = ExtResource( 12 )
 
-[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Mesa" index="1"]
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Hermana" index="1"]
 
-[node name="Florero" parent="Interactuables" index="5" instance=ExtResource( 3 )]
-margin_left = 660.615
-margin_top = 239.812
-margin_right = 724.615
-margin_bottom = 303.813
+[node name="Mama" parent="Interactuables" index="3" instance=ExtResource( 3 )]
+margin_left = 558.667
+margin_top = 212.491
+margin_right = 748.667
+margin_bottom = 402.491
+texture_normal = ExtResource( 17 )
+
+[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Mama" index="1"]
+
+[node name="Florero" parent="Interactuables" index="4" instance=ExtResource( 3 )]
+margin_left = 91.0
+margin_top = 181.0
+margin_right = 209.0
+margin_bottom = 393.0
+texture_normal = null
 texto = "Es una margarita"
 
 [node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Florero" index="1"]
 
-[node name="Carpeta" parent="Interactuables" index="6" instance=ExtResource( 3 )]
-margin_left = 737.343
-margin_top = 308.751
-margin_right = 801.343
-margin_bottom = 372.752
-texto = "Ailen esta haciendo la tarea durante la cuarentena."
-
-[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Carpeta" index="1"]
-
-[node name="CambiarNivel" parent="Interactuables" index="7" instance=ExtResource( 4 )]
-margin_left = 438.0
-margin_top = 132.0
-margin_right = -522.0
-margin_bottom = -404.0
+[node name="CambiarNivel" parent="Interactuables" index="5" instance=ExtResource( 4 )]
+margin_left = 955.758
+margin_top = 170.414
+margin_right = -4.24231
+margin_bottom = -365.586
+texture_normal = ExtResource( 11 )
 nivelCarga = 2
 
-[node name="Puerta" parent="Interactuables" index="8" instance=ExtResource( 3 )]
-margin_left = 447.26
-margin_top = 130.108
-margin_right = 529.26
-margin_bottom = 206.108
+[node name="Puerta" parent="Interactuables" index="6" instance=ExtResource( 3 )]
+margin_left = 956.667
+margin_top = 168.522
+margin_right = 1038.67
+margin_bottom = 244.522
+texture_normal = ExtResource( 16 )
 necesitaA = "Llaves"
 pista = "Donde deje las llaves?"
 
@@ -99,11 +95,12 @@ stream = ExtResource( 8 )
 [node name="SonidoPista" type="AudioStreamPlayer" parent="Interactuables/Puerta" index="2"]
 stream = ExtResource( 7 )
 
-[node name="Llaves" parent="Interactuables" index="9" instance=ExtResource( 3 )]
-margin_left = 191.128
-margin_top = 317.421
-margin_right = 255.128
-margin_bottom = 381.422
+[node name="Llaves" parent="Interactuables" index="7" instance=ExtResource( 3 )]
+margin_left = 215.355
+margin_top = 322.612
+margin_right = 295.355
+margin_bottom = 402.612
+texture_normal = ExtResource( 14 )
 agarrable = true
 
 [node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Llaves" index="1"]
@@ -112,11 +109,12 @@ stream = ExtResource( 9 )
 [node name="SonidoAgarrado" type="AudioStreamPlayer" parent="Interactuables/Llaves" index="2"]
 stream = ExtResource( 9 )
 
-[node name="Billetera" parent="Interactuables" index="10" instance=ExtResource( 3 )]
-margin_left = 724.308
-margin_top = 250.616
-margin_right = 788.308
-margin_bottom = 314.617
+[node name="Billetera" parent="Interactuables" index="8" instance=ExtResource( 3 )]
+margin_left = 471.065
+margin_top = 340.225
+margin_right = 535.065
+margin_bottom = 404.226
+texture_normal = ExtResource( 15 )
 agarrable = true
 
 [node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Billetera" index="1"]
@@ -125,11 +123,11 @@ stream = ExtResource( 6 )
 [node name="SonidoAgarrado" type="AudioStreamPlayer" parent="Interactuables/Billetera" index="2"]
 stream = ExtResource( 6 )
 
-[node name="Documento" parent="Interactuables" index="11" instance=ExtResource( 3 )]
-margin_left = 767.625
-margin_top = 199.988
-margin_right = 831.625
-margin_bottom = 263.989
+[node name="Documento" parent="Interactuables" index="9" instance=ExtResource( 3 )]
+margin_left = 390.789
+margin_top = 331.127
+margin_right = 469.789
+margin_bottom = 410.127
 texture_normal = ExtResource( 5 )
 agarrable = true
 
@@ -144,6 +142,7 @@ margin_left = 11.3889
 margin_top = 317.335
 margin_right = -948.611
 margin_bottom = -218.665
+texture_normal = ExtResource( 13 )
 aDondeIr = "Cocina"
 
 [node name="CambiarLugar2" parent="CambiarNiveles" index="1"]

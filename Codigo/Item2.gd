@@ -7,7 +7,7 @@ signal darPista
 export(bool) var agarrable = false
 var necesitaA = ["MedicinaNervios","Disparador"]
 export(String) var texto = ""
-export(String) var pista = "123"
+export(String) var pista = "Deberia pagar lo que lleve aca antes de irme"
 export var dondeDejarRecibo = Vector2()
 
 onready var animationPlayer = $AnimationPlayer

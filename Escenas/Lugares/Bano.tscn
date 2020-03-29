@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Escenas/Lugares/LugarBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenas/Item.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Audio/sfx/sfx_lavarmanos.wav" type="AudioStream" id=3]
 [ext_resource path="res://Visuales/Fondos/bg-bano.png" type="Texture" id=4]
+[ext_resource path="res://Visuales/FlechaIzquierda.png" type="Texture" id=5]
 
 [node name="Lugar" instance=ExtResource( 1 )]
 textoAlEntrar = "Si, conviene lavarme las manos aca."
@@ -13,47 +14,42 @@ textoSegundaVez = "Si, conviene lavarme las manos aca."
 texture = ExtResource( 4 )
 
 [node name="Pileta" parent="Interactuables" index="0" instance=ExtResource( 2 )]
-margin_left = 766.854
-margin_top = 268.35
-margin_right = 830.854
-margin_bottom = 332.351
+margin_left = 109.0
+margin_top = 377.0
+margin_right = 437.0
+margin_bottom = 517.0
+texture_normal = null
 texto = "Y... Listo, manos limpias."
 
 [node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Pileta" index="1"]
 stream = ExtResource( 3 )
 
 [node name="Espejo" parent="Interactuables" index="1" instance=ExtResource( 2 )]
-margin_left = 766.394
-margin_top = 180.092
-margin_right = 830.394
-margin_bottom = 244.093
+margin_left = 135.0
+margin_top = 89.0
+margin_right = 381.0
+margin_bottom = 349.0
+texture_normal = null
 texto = "Que bonito soy"
 
 [node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Espejo" index="1"]
 
-[node name="Inodoro" parent="Interactuables" index="2" instance=ExtResource( 2 )]
-margin_left = 645.185
-margin_top = 321.9
-margin_right = 709.185
-margin_bottom = 385.9
-texto = "No comi nada todavia como para tener ganas"
-
-[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Inodoro" index="1"]
-
-[node name="Ducha" parent="Interactuables" index="3" instance=ExtResource( 2 )]
-margin_left = 904.249
-margin_top = 230.084
-margin_right = 968.249
-margin_bottom = 294.084
+[node name="Ducha" parent="Interactuables" index="2" instance=ExtResource( 2 )]
+margin_left = 454.0
+margin_top = -2.0
+margin_right = 849.0
+margin_bottom = 389.0
+texture_normal = null
 texto = "Me bañare mas a la noche."
 
 [node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Ducha" index="1"]
 
 [node name="CambiarLugar2" parent="CambiarNiveles" index="1"]
-margin_left = 88.9569
-margin_top = 278.083
-margin_right = 152.957
-margin_bottom = 342.083
+margin_left = 15.1171
+margin_top = 207.759
+margin_right = 79.1172
+margin_bottom = 271.759
+texture_normal = ExtResource( 5 )
 aDondeIr = "Habitacion"
 
 [node name="Inventario" parent="." index="4"]

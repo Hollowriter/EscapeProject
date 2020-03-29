@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Escenas/Lugares/LugarBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenas/Item.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Escenas/BorrarNivel.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Escenas/CambiarNivel.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Visuales/Fondos/bg-plaza.png" type="Texture" id=5]
+[ext_resource path="res://Visuales/policeman.png" type="Texture" id=6]
+[ext_resource path="res://Visuales/FlechaArriba.png" type="Texture" id=7]
 
 [node name="Lugar" instance=ExtResource( 1 )]
 textoAlEntrar = "Policia: ¡Alto! Me informan que un ladron acaba de robar articulos de una farmacia. Como los que vos llevas."
@@ -17,13 +19,15 @@ margin_left = 465.893
 margin_top = 188.115
 margin_right = -494.107
 margin_bottom = -347.885
+texture_normal = ExtResource( 7 )
 nivelCarga = 5
 
 [node name="Policia" parent="Interactuables" index="1" instance=ExtResource( 2 )]
-margin_left = 452.0
-margin_top = 176.0
-margin_right = 534.0
-margin_bottom = 257.0
+margin_left = 423.44
+margin_top = 174.413
+margin_right = 633.44
+margin_bottom = 384.413
+texture_normal = ExtResource( 6 )
 riesgo = true
 necesitaA = "Recibo"
 pista = "Policia: Proba que no robaste esos articulos. ¡No juegues con mi paciencia!"

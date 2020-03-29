@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Escenas/Lugares/LugarBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenas/Item.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Audio/sfx/sfx_cambiarse.wav" type="AudioStream" id=3]
 [ext_resource path="res://Visuales/Fondos/bg-cuarto.png" type="Texture" id=4]
+[ext_resource path="res://Visuales/Camisa.png" type="Texture" id=5]
+[ext_resource path="res://Visuales/FlechaIzquierda.png" type="Texture" id=6]
+[ext_resource path="res://Visuales/FlechaDerecha.png" type="Texture" id=7]
 
 [node name="Lugar" instance=ExtResource( 1 )]
 textoAlEntrar = "Creo que por aca deje una remera para cambiarme."
@@ -13,58 +16,33 @@ textoSegundaVez = "Devuelta en mi cueva."
 texture = ExtResource( 4 )
 
 [node name="Cama" parent="Interactuables" index="0" instance=ExtResource( 2 )]
-margin_left = 499.142
-margin_top = 298.315
-margin_right = 563.142
-margin_bottom = 362.315
+margin_left = 345.0
+margin_top = 204.0
+margin_right = 988.0
+margin_bottom = 387.0
+texture_normal = null
 texto = "Aca deje mi remera para estar adentro. Sera mejor que me la cambie."
 
 [node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Cama" index="1"]
 
-[node name="Computadora" parent="Interactuables" index="1" instance=ExtResource( 2 )]
-margin_left = 204.933
-margin_top = 225.032
-margin_right = 268.933
-margin_bottom = 289.032
-texto = "Espero que haya vuelto internet."
-
-[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Computadora" index="1"]
-
-[node name="Silla" parent="Interactuables" index="2" instance=ExtResource( 2 )]
-margin_left = 202.341
-margin_top = 311.979
-margin_right = 266.341
-margin_bottom = 375.979
-texto = "Tengo que cambiar esta silla."
-
-[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Silla" index="1"]
-
-[node name="Placard" parent="Interactuables" index="3" instance=ExtResource( 2 )]
-margin_left = 923.298
-margin_top = 270.029
-margin_right = 987.298
-margin_bottom = 334.029
+[node name="Placard" parent="Interactuables" index="1" instance=ExtResource( 2 )]
+margin_left = 93.0
+margin_top = 34.0
+margin_right = 249.0
+margin_bottom = 387.0
 rect_pivot_offset = Vector2( 1364.99, 3.6403 )
+texture_normal = null
 texto = "Tengo ropa para estar adentro y para estar afuera"
 
 [node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Placard" index="1"]
 
-[node name="Ventana" parent="Interactuables" index="4" instance=ExtResource( 2 )]
-margin_left = 663.851
-margin_top = 160.227
-margin_right = 727.851
-margin_bottom = 224.227
+[node name="Ropa" parent="Interactuables" index="2" instance=ExtResource( 2 )]
+margin_left = 535.135
+margin_top = 180.271
+margin_right = 755.135
+margin_bottom = 400.271
 rect_pivot_offset = Vector2( 1364.99, 3.6403 )
-texto = "No hay casi nadie en la calle."
-
-[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Ventana" index="1"]
-
-[node name="Ropa" parent="Interactuables" index="5" instance=ExtResource( 2 )]
-margin_left = 501.301
-margin_top = 217.078
-margin_right = 565.301
-margin_bottom = 281.078
-rect_pivot_offset = Vector2( 1364.99, 3.6403 )
+texture_normal = ExtResource( 5 )
 agarrable = true
 
 [node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Ropa" index="1"]
@@ -74,17 +52,19 @@ stream = ExtResource( 3 )
 stream = ExtResource( 3 )
 
 [node name="CambiarLugar" parent="CambiarNiveles" index="0"]
-margin_left = 41.0617
-margin_top = 261.341
-margin_right = 105.062
-margin_bottom = 325.342
+margin_left = 0.781151
+margin_top = 263.859
+margin_right = 64.7814
+margin_bottom = 327.86
+texture_normal = ExtResource( 6 )
 aDondeIr = "Living2"
 
 [node name="CambiarLugar2" parent="CambiarNiveles" index="1"]
-margin_left = 775.362
-margin_top = 263.733
-margin_right = 839.362
-margin_bottom = 327.733
+margin_left = 951.59
+margin_top = 79.953
+margin_right = 1015.59
+margin_bottom = 143.953
+texture_normal = ExtResource( 7 )
 aDondeIr = "Bano"
 
 [node name="Inventario" parent="." index="4"]

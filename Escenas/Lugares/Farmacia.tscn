@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Escenas/Lugares/LugarBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenas/CajaRegistradora.tscn" type="PackedScene" id=2]
@@ -8,6 +8,9 @@
 [ext_resource path="res://Audio/item/item_cajaremedio_apoyarenlamesa.wav" type="AudioStream" id=6]
 [ext_resource path="res://Audio/item/item_cajaremedio_agarrar.wav" type="AudioStream" id=7]
 [ext_resource path="res://Visuales/Fondos/bg-farmacia.jpg" type="Texture" id=8]
+[ext_resource path="res://Visuales/FlechaAbajo.png" type="Texture" id=9]
+[ext_resource path="res://Visuales/RemedioParaLosNervios.png" type="Texture" id=10]
+[ext_resource path="res://Visuales/tuboparaelasma.png" type="Texture" id=11]
 
 [node name="Lugar" instance=ExtResource( 1 )]
 textoAlEntrar = "Perfecto, ya estoy en la farmacia. Debo buscar el medicamento de mi madre y el inhalador para mi hermana."
@@ -16,10 +19,11 @@ textoAlEntrar = "Perfecto, ya estoy en la farmacia. Debo buscar el medicamento d
 texture = ExtResource( 8 )
 
 [node name="CajaRegistradora" parent="Interactuables" index="0" instance=ExtResource( 2 )]
-margin_left = 46.1255
-margin_top = 6.25989
-margin_right = 110.126
-margin_bottom = 70.2599
+margin_left = 467.0
+margin_top = 216.0
+margin_right = 572.0
+margin_bottom = 351.0
+texture_normal = null
 texto = "Deberia pagar antes de irme"
 dondeDejarRecibo = Vector2( 80, 0 )
 
@@ -30,63 +34,40 @@ stream = ExtResource( 6 )
 
 [node name="SonidoAgarrado" type="AudioStreamPlayer" parent="Interactuables/CajaRegistradora" index="3"]
 
-[node name="Gondola1" parent="Interactuables" index="1" instance=ExtResource( 3 )]
-margin_left = 441.482
-margin_top = 290.832
-margin_right = 505.482
-margin_bottom = 354.832
-texto = "Esta lleno de suplementos de dieta"
-
-[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Gondola1" index="1"]
-
-[node name="Gondola2" parent="Interactuables" index="2" instance=ExtResource( 3 )]
-margin_left = 592.347
-margin_top = 284.129
-margin_right = 656.347
-margin_bottom = 348.13
+[node name="Gondola2" parent="Interactuables" index="1" instance=ExtResource( 3 )]
+margin_left = 70.0
+margin_top = 237.0
+margin_right = 403.0
+margin_bottom = 383.0
+texture_normal = null
 texto = "Por aca debe estar la medicina para los nervios"
 
 [node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Gondola2" index="1"]
 
-[node name="Gondola3" parent="Interactuables" index="3" instance=ExtResource( 3 )]
-margin_left = 721.98
-margin_top = 288.673
-margin_right = 785.98
-margin_bottom = 352.674
+[node name="Gondola3" parent="Interactuables" index="2" instance=ExtResource( 3 )]
+margin_left = 635.536
+margin_top = 265.0
+margin_right = 820.536
+margin_bottom = 368.0
+texture_normal = null
 texto = "El inhalador para mi hermana deberia estar por esta gondola"
 
 [node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Gondola3" index="1"]
 
-[node name="Reloj" parent="Interactuables" index="4" instance=ExtResource( 3 )]
-margin_left = 316.495
-margin_top = 78.2757
-margin_right = 380.495
-margin_bottom = 142.276
-texto = "Recien es mediodia"
-
-[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Reloj" index="1"]
-
-[node name="Puerta" parent="Interactuables" index="5" instance=ExtResource( 3 )]
-margin_left = 54.7555
-margin_top = 181.0
-margin_right = 118.755
-margin_bottom = 245.0
-texto = "Puerta"
-
-[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Puerta" index="1"]
-
-[node name="CambiarNivel" parent="Interactuables" index="6" instance=ExtResource( 4 )]
-margin_left = 52.5965
-margin_top = 257.138
-margin_right = -907.404
-margin_bottom = -278.862
+[node name="CambiarNivel" parent="Interactuables" index="3" instance=ExtResource( 4 )]
+margin_left = 849.072
+margin_top = 319.734
+margin_right = -94.9276
+margin_bottom = -200.266
+texture_normal = ExtResource( 9 )
 nivelCarga = 4
 
-[node name="MedicinaNervios" parent="Interactuables" index="7" instance=ExtResource( 3 )]
-margin_left = 596.979
-margin_top = 201.595
-margin_right = 660.979
-margin_bottom = 265.596
+[node name="MedicinaNervios" parent="Interactuables" index="4" instance=ExtResource( 3 )]
+margin_left = 61.6782
+margin_top = 162.742
+margin_right = 125.678
+margin_bottom = 226.743
+texture_normal = ExtResource( 10 )
 agarrable = true
 
 [node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/MedicinaNervios" index="1"]
@@ -95,30 +76,18 @@ stream = ExtResource( 7 )
 [node name="SonidoAgarrado" type="AudioStreamPlayer" parent="Interactuables/MedicinaNervios" index="2"]
 stream = ExtResource( 7 )
 
-[node name="Disparador" parent="Interactuables" index="8" instance=ExtResource( 3 )]
-margin_left = 731.094
-margin_top = 196.075
-margin_right = 795.094
-margin_bottom = 260.076
+[node name="Disparador" parent="Interactuables" index="5" instance=ExtResource( 3 )]
+margin_left = 733.252
+margin_top = 180.966
+margin_right = 797.252
+margin_bottom = 244.967
+texture_normal = ExtResource( 11 )
 agarrable = true
 
 [node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/Disparador" index="1"]
 stream = ExtResource( 7 )
 
 [node name="SonidoAgarrado" type="AudioStreamPlayer" parent="Interactuables/Disparador" index="2"]
-stream = ExtResource( 7 )
-
-[node name="SuplementoDieta" parent="Interactuables" index="9" instance=ExtResource( 3 )]
-margin_left = 442.788
-margin_top = 201.919
-margin_right = 506.788
-margin_bottom = 265.92
-agarrable = true
-
-[node name="Sonido" type="AudioStreamPlayer" parent="Interactuables/SuplementoDieta" index="1"]
-stream = ExtResource( 7 )
-
-[node name="SonidoAgarrado" type="AudioStreamPlayer" parent="Interactuables/SuplementoDieta" index="2"]
 stream = ExtResource( 7 )
 
 [node name="BorrarNivel" parent="CambiarNiveles" index="3" instance=ExtResource( 5 )]
