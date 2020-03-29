@@ -12,6 +12,7 @@ var nivel = 1
 var riesgoDeInfeccion = 0
 var limiteInfeccion = 10
 
+onready var manejadorDeMusica = $ManejadorDeMusica
 onready var inventario
 onready var cajaDeTexto
 onready var medidorRiesgo = $MedidorRiesgo
@@ -66,6 +67,10 @@ func SoltarItem(item):
 			contenido[i] = []
 			inventario.AgregarItem(i, null)
 
+func AudioPlay(_nivel):
+	manejadorDeMusica.cambiar_nivel(_nivel)
+	manejadorDeMusica.audio_reproducir()
+	
 func CondicionesDeCadaNivel(accion = "seleccionar", item1 = "", item2 = ""):
 	match (nivel):
 		1:

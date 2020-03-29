@@ -12,6 +12,7 @@ func Apretado():
 	
 	if nivelCarga >= 1:
 		sceneLoader.nivel = nivelCarga
+		sceneLoader.AudioPlay(nivelCarga)
 
 func cargar_nivel1():
 	sceneLoader.load_scene("Cocina")

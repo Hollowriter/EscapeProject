@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/M03.ogg-09458c04136c92fa9a93e6188d0f5c98.oggstr"
+
+[deps]
+
+source_file="res://Audio/Musica/M03.ogg"
+dest_files=[ "res://.import/M03.ogg-09458c04136c92fa9a93e6188d0f5c98.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
