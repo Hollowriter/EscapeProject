@@ -1,12 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Escenas/Lugares/LugarBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenas/Item.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Escenas/BorrarNivel.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Escenas/CambiarNivel.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Visuales/Fondos/bg-plaza.png" type="Texture" id=5]
 
 [node name="Lugar" instance=ExtResource( 1 )]
 textoAlEntrar = "Policia: ¡Alto! Me informan que un ladron acaba de robar articulos de una farmacia. Como los que vos llevas."
+
+[node name="Fondo" parent="." index="0"]
+texture = ExtResource( 5 )
 
 [node name="CambiarNivel" parent="Interactuables" index="0" instance=ExtResource( 4 )]
 margin_left = 465.893

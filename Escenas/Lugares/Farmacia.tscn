@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Escenas/Lugares/LugarBase.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Escenas/CajaRegistradora.tscn" type="PackedScene" id=2]
@@ -7,9 +7,13 @@
 [ext_resource path="res://Escenas/BorrarNivel.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Audio/item/item_cajaremedio_apoyarenlamesa.wav" type="AudioStream" id=6]
 [ext_resource path="res://Audio/item/item_cajaremedio_agarrar.wav" type="AudioStream" id=7]
+[ext_resource path="res://Visuales/Fondos/bg-farmacia.jpg" type="Texture" id=8]
 
 [node name="Lugar" instance=ExtResource( 1 )]
 textoAlEntrar = "Perfecto, ya estoy en la farmacia. Debo buscar el medicamento de mi madre y el inhalador para mi hermana."
+
+[node name="Fondo" parent="." index="0"]
+texture = ExtResource( 8 )
 
 [node name="CajaRegistradora" parent="Interactuables" index="0" instance=ExtResource( 2 )]
 margin_left = 46.1255

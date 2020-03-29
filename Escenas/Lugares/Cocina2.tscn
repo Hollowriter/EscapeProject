@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Escenas/Lugares/LugarBase.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Visuales/Fondos/cocina.jpg" type="Texture" id=2]
+[ext_resource path="res://Visuales/Fondos/bg-cocina.png" type="Texture" id=2]
 [ext_resource path="res://Escenas/Item.tscn" type="PackedScene" id=3]
 
 [node name="Lugar" instance=ExtResource( 1 )]
