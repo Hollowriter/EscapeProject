@@ -31,9 +31,12 @@ func cambiar_nivel(nv):
 	audio_reproducir()
 
 func PlayIntro():
+	musica.stop()
 	musicaIntro = cancionesIntro[nivel-1]
 	musicaIntro.play()
 	
 func PlayLoop():
+	musica.stop()
+	musicaIntro.stop()
 	musica = canciones[nivel-1]
 	musica.play()

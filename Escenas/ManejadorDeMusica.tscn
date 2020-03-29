@@ -29,8 +29,4 @@ stream = ExtResource( 6 )
 [node name="MusicaCalleYParque" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
 [connection signal="finished" from="MusicaCasaIntro" to="." method="PlayLoop"]
-[connection signal="finished" from="MusicaCasa" to="." method="PlayLoop"]
 [connection signal="finished" from="MusicaCalleIntro" to="." method="PlayLoop"]
-[connection signal="finished" from="MusicaCalle" to="." method="PlayLoop"]
-[connection signal="finished" from="MusicaFarmacia" to="." method="PlayLoop"]
-[connection signal="finished" from="MusicaCalleYParque" to="." method="PlayLoop"]
