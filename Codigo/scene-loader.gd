@@ -69,7 +69,6 @@ func SoltarItem(item):
 
 func AudioPlay(_nivel):
 	manejadorDeMusica.cambiar_nivel(_nivel)
-	manejadorDeMusica.audio_reproducir()
 	
 func CondicionesDeCadaNivel(accion = "seleccionar", item1 = "", item2 = ""):
 	match (nivel):
